@@ -1,11 +1,13 @@
 package abudu.product.dto;
 
+import abudu.product.models.User;
+
 import java.util.List;
 
 public class CartDTO {
-    private String id;
+    private Long id;
     private double totalPrice;
-    private String userId;
+    private User userId;
     private List<ProductDTO> products;
     private String createdAt;
     private String updatedAt;
@@ -13,7 +15,7 @@ public class CartDTO {
     public CartDTO() {
     }
 
-    public CartDTO(String id, double totalPrice, String userId, List<ProductDTO> products, String createdAt, String updatedAt) {
+    public CartDTO(Long id, double totalPrice, User userId, List<ProductDTO> products, String createdAt, String updatedAt) {
         this.id = id;
         this.totalPrice = totalPrice;
         this.userId = userId;
@@ -23,11 +25,11 @@ public class CartDTO {
     }
 
     // Getters and Setters
-    public String getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -39,10 +41,10 @@ public class CartDTO {
         this.totalPrice = totalPrice;
     }
 
-    public String getUserId() {
+    public User getUserId() {
         return userId;
     }
-    public void setUserId(String userId) {
+    public void setUserId(User userId) {
         this.userId = userId;
     }
 

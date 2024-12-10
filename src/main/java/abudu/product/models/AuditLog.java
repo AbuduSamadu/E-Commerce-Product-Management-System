@@ -8,7 +8,7 @@ import java.time.LocalDateTime;
 @Document(collection = "audit_logs")
 public class AuditLog {
     @Id
-    private String id;
+    private Long id;
 
     private String action;
     private String performedBy;
@@ -18,7 +18,7 @@ public class AuditLog {
     public AuditLog() {
     }
 
-    public AuditLog(String id, String action, String performedBy, LocalDateTime timestamp, String details) {
+    public AuditLog(Long id, String action, String performedBy, LocalDateTime timestamp, String details) {
         this.id = id;
         this.action = action;
         this.performedBy = performedBy;
@@ -27,11 +27,11 @@ public class AuditLog {
     }
 
     // Getters and Setters
-    public String getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(Long id) {
         this.id = id;
     }
 

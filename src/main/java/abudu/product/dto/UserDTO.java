@@ -8,11 +8,12 @@ import java.util.List;
 
 public class UserDTO {
 
-    private String id;
+    private Long id;
     private String username;
     private String email;
     private String password;
     private String firstName;
+    private String lastName;
     private boolean active;
     private Role role;
     private LocalDateTime createdAt;
@@ -24,12 +25,13 @@ public class UserDTO {
     public UserDTO() {
     }
 
-    public UserDTO(String id, String username, String email, String password, String firstName, boolean active, Role role, LocalDateTime createdAt, LocalDateTime updatedAt, Cart cart, List<OrderDTO> orders) {
+    public UserDTO(Long id, String username, String email, String password, String firstName,String lastName, boolean active, Role role, LocalDateTime createdAt, LocalDateTime updatedAt, Cart cart, List<OrderDTO> orders) {
         this.id = id;
         this.username = username;
         this.email = email;
         this.password = password;
         this.firstName = firstName;
+        this.lastName = lastName;
         this.active = active;
         this.role = role;
         this.createdAt = createdAt;
@@ -39,11 +41,11 @@ public class UserDTO {
     }
 
 
-    public String getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -73,6 +75,12 @@ public class UserDTO {
 
     public String getFirstName() {
         return firstName;
+    }
+    public String getLastName() {
+        return lastName;
+    }
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
     }
 
     public void setFirstName(String firstName) {
@@ -125,6 +133,24 @@ public class UserDTO {
 
     public void setOrders(List<OrderDTO> orders) {
         this.orders = orders;
+    }
+
+    @Override
+    public String toString() {
+        return "UserDTO{" +
+                "id='" + id + '\'' +
+                ", username='" + username + '\'' +
+                ", email='" + email + '\'' +
+                ", password='" + password + '\'' +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", active=" + active +
+                ", role=" + role +
+                ", createdAt=" + createdAt +
+                ", updatedAt=" + updatedAt +
+                ", cart=" + cart +
+                ", orders=" + orders +
+                '}';
     }
 
 

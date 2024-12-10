@@ -14,7 +14,7 @@ public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private String id;
+    private Long id;
 
     @Column(unique = true)
     private String email;
@@ -39,7 +39,7 @@ public class User {
     public User() {
     }
 
-    public User(String id, String email, String password,String username, String firstName, String lastName, boolean active, LocalDateTime createdAt, LocalDateTime updatedAt, Role role, Cart cart, List<Order> orders) {
+    public User(Long id, String email, String password,String username, String firstName, String lastName, boolean active, LocalDateTime createdAt, LocalDateTime updatedAt, Role role, Cart cart, List<Order> orders) {
         this.id = id;
         this.email = email;
         this.password = password;
@@ -54,11 +54,11 @@ public class User {
         this.orders = orders;
     }
 
-    public String getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(Long id) {
         this.id = id;
     }
 

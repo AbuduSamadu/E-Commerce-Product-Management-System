@@ -1,74 +1,66 @@
 package abudu.product.dto;
 
-public class OrderDTO {
-    private String id;
-    private String userId;
-    private String productId;
-    private int quantity;
-    private double price;
-    private double total;
-    private String status;
+import abudu.product.models.User;
 
+import java.time.LocalDateTime;
+import java.util.List;
+
+public class OrderDTO {
+    private Long id;
+    private User userId;
+    private List<Long> productIds;
+    private double totalAmount;
+    private String status;
+    private String shippingAddress;
+    private LocalDateTime createdAt;
+    private LocalDateTime updatedAt;
+
+    // Constructors
     public OrderDTO() {
     }
 
-    public OrderDTO(String id, String userId, String productId, int quantity, double price, double total, String status) {
+    public OrderDTO(Long id, User userId, List<Long> productIds, double totalAmount, String status, String shippingAddress, LocalDateTime createdAt, LocalDateTime updatedAt) {
         this.id = id;
         this.userId = userId;
-        this.productId = productId;
-        this.quantity = quantity;
-        this.price = price;
-        this.total = total;
+        this.productIds = productIds;
+        this.totalAmount = totalAmount;
         this.status = status;
+        this.shippingAddress = shippingAddress;
+        this.createdAt = createdAt;
+        this.updatedAt = updatedAt;
     }
 
     // Getters and Setters
-    public String getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
-    public String getUserId() {
+    public User getUserId() {
         return userId;
     }
 
-    public void setUserId(String userId) {
+    public void setUserId(User userId) {
         this.userId = userId;
     }
 
-    public String getProductId() {
-        return productId;
+    public List<Long> getProductIds() {
+        return productIds;
     }
 
-    public void setProductId(String productId) {
-        this.productId = productId;
+    public void setProductIds(List<Long> productIds) {
+        this.productIds = productIds;
     }
 
-    public int getQuantity() {
-        return quantity;
+    public double getTotalAmount() {
+        return totalAmount;
     }
 
-    public void setQuantity(int quantity) {
-        this.quantity = quantity;
-    }
-
-    public double getPrice() {
-        return price;
-    }
-
-    public void setPrice(double price) {
-        this.price = price;
-    }
-
-    public double getTotal() {
-        return total;
-    }
-
-    public void setTotal(double total) {
-        this.total = total;
+    public void setTotalAmount(double totalAmount) {
+        this.totalAmount = totalAmount;
     }
 
     public String getStatus() {
@@ -79,18 +71,42 @@ public class OrderDTO {
         this.status = status;
     }
 
-    // toString
+    public String getShippingAddress() {
+        return shippingAddress;
+    }
 
+    public void setShippingAddress(String shippingAddress) {
+        this.shippingAddress = shippingAddress;
+    }
+
+    public LocalDateTime getCreatedAt() {
+        return createdAt;
+    }
+
+    public void setCreatedAt(LocalDateTime createdAt) {
+        this.createdAt = createdAt;
+    }
+
+    public LocalDateTime getUpdatedAt() {
+        return updatedAt;
+    }
+
+    public void setUpdatedAt(LocalDateTime updatedAt) {
+        this.updatedAt = updatedAt;
+    }
+
+    // toString
     @Override
     public String toString() {
-        return "Order{" +
+        return "OrderDTO{" +
                 "id='" + id + '\'' +
                 ", userId='" + userId + '\'' +
-                ", productId='" + productId + '\'' +
-                ", quantity=" + quantity +
-                ", price=" + price +
-                ", total=" + total +
+                ", productIds=" + productIds +
+                ", totalAmount=" + totalAmount +
                 ", status='" + status + '\'' +
+                ", shippingAddress='" + shippingAddress + '\'' +
+                ", createdAt=" + createdAt +
+                ", updatedAt=" + updatedAt +
                 '}';
     }
 }

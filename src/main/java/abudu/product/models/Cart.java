@@ -11,7 +11,7 @@ public class Cart {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private String id;
+    private Long id;
 
     @OneToOne(mappedBy = "cart", cascade = CascadeType.ALL)
     @JoinColumn(name = "user_id")
@@ -31,7 +31,7 @@ public class Cart {
     public Cart() {
     }
 
-    public Cart(String id, User user, List<Product> products, double totalPrice) {
+    public Cart(Long id, User user, List<Product> products, double totalPrice) {
         this.id = id;
         this.user = user;
         this.products = products;
@@ -41,11 +41,11 @@ public class Cart {
     // Getters and Setters
 
 
-    public String getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(Long id) {
         this.id = id;
     }
 

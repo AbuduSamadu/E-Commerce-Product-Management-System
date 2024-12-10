@@ -1,14 +1,16 @@
 package abudu.product.dto;
 
+import abudu.product.models.Category;
+
 import java.math.BigDecimal;
 
 public class ProductDTO {
-    private String id;
+    private Long id;
     private String name;
     private String description;
     private BigDecimal price;
     private String imgUrl;
-    private String categoryId;
+    private Category categoryId;
     private int stock;
     private String createdAt;
     private String updatedAt;
@@ -16,7 +18,7 @@ public class ProductDTO {
     public ProductDTO() {
     }
 
-    public ProductDTO(String id, String name, String description, BigDecimal price, String imgUrl, String categoryId, int stock, String createdAt, String updatedAt) {
+    public ProductDTO(Long id, String name, String description, BigDecimal price, String imgUrl, Category categoryId, int stock, String createdAt, String updatedAt) {
         this.id = id;
         this.name = name;
         this.description = description;
@@ -29,11 +31,11 @@ public class ProductDTO {
     }
 
     // Getters and Setters
-    public String getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -69,11 +71,11 @@ public class ProductDTO {
         this.imgUrl = imgUrl;
     }
 
-    public String getCategoryId() {
+    public Category getCategoryId() {
         return categoryId;
     }
 
-    public void setCategoryId(String categoryId) {
+    public void setCategoryId(Category categoryId) {
         this.categoryId = categoryId;
     }
 
