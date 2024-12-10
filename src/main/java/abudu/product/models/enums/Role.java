@@ -1,4 +1,4 @@
-package abudu.product.models;
+package abudu.product.models.enums;
 
 public enum Role
 {
