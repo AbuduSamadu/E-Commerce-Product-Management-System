@@ -20,7 +20,7 @@ public class Category {
     @OneToMany(mappedBy = "category")
     private List<Category> subcategories;
 
-    @OneToMany(mappedBy = "product")
+    @OneToMany(mappedBy = "category")
     private List<Product> products;
 
     // Constructors
