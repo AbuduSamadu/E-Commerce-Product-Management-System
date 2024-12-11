@@ -7,7 +7,6 @@ import jakarta.persistence.*;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 import java.util.List;
-import java.util.Map;
 
 @Entity
 @Table(name = "products")
@@ -31,6 +30,12 @@ public class Product {
     @ManyToMany(mappedBy = "products")
     private List<Order> orders;
 
+    @OneToMany(mappedBy = "product", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<OrderItem> orderItems;
+
+    @OneToMany(mappedBy = "product", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<CartItem> cartItems;
+
 
     private LocalDateTime createdAt;
     private LocalDateTime updatedAt;
@@ -38,7 +43,7 @@ public class Product {
     public Product() {
     }
 
-    public Product(Long id, String name, BigDecimal price, String description, int stock, Category category, List<Order> orders, LocalDateTime createdAt, LocalDateTime updatedAt, String imgUrl) {
+    public Product(Long id, String name, BigDecimal price, String description, int stock, Category category, List<Order> orders, LocalDateTime createdAt, LocalDateTime updatedAt, String imgUrl, List<OrderItem> orderItems, List<CartItem> cartItems) {
         this.id = id;
         this.name = name;
         this.price = price;
@@ -49,6 +54,8 @@ public class Product {
         this.orders = orders;
         this.createdAt = createdAt;
         this.updatedAt = updatedAt;
+        this.orderItems = orderItems;
+        this.cartItems = cartItems;
     }
 
     public Long getId() {
@@ -62,6 +69,12 @@ public class Product {
     public String getName() {
         return name;
     }
+    public List<OrderItem> getOrderItems() {
+        return orderItems;
+    }
+    public void setOrderItems(List<OrderItem> orderItems) {
+        this.orderItems = orderItems;
+    }
 
     public void setName(String name) {
         this.name = name;
@@ -69,6 +82,13 @@ public class Product {
 
     public BigDecimal getPrice() {
         return price;
+    }
+
+    public List<CartItem> getCartItems() {
+        return cartItems;
+    }
+    public void setCartItems(List<CartItem> cartItems) {
+        this.cartItems = cartItems;
     }
 
     public void setPrice(BigDecimal price) {

@@ -26,6 +26,9 @@ public class Order {
             inverseJoinColumns = @JoinColumn(name = "product_id"))
     private List<Product> products; // List of products in the order
 
+  @OneToMany(mappedBy = "order", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<OrderItem> orderItems;
+
     private double totalAmount;
 
     private OrderStatus status;
@@ -36,11 +39,13 @@ public class Order {
 
     private LocalDateTime updatedAt;
 
+
+
     // Constructors
     public Order() {
     }
 
-    public Order(User user, List<Product> products, double totalAmount, OrderStatus status, String shippingAddress) {
+    public Order(User user, List<Product> products, double totalAmount, OrderStatus status, String shippingAddress, List<OrderItem> orderItems) {
         this.user = user;
         this.products = products;
         this.totalAmount = totalAmount;
@@ -48,6 +53,7 @@ public class Order {
         this.shippingAddress = shippingAddress;
         this.createdAt = LocalDateTime.now();
         this.updatedAt = LocalDateTime.now();
+        this.orderItems = orderItems;
     }
 
     // Getters and Setters
@@ -79,7 +85,12 @@ public class Order {
     public double getTotalAmount() {
         return totalAmount;
     }
-
+    public List<OrderItem> getOrderItems() {
+        return orderItems;
+    }
+    public void setOrderItems(List<OrderItem> orderItems) {
+        this.orderItems = orderItems;
+    }
     public void setTotalAmount(double totalAmount) {
         this.totalAmount = totalAmount;
     }
