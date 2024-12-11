@@ -17,7 +17,7 @@ public class Category {
     @JoinColumn(name = "parent_category_id")
     private Category parentCategory;
 
-    @OneToMany(mappedBy = "category")
+    @OneToMany(mappedBy = "parentCategory")
     private List<Category> subcategories;
 
     @OneToMany(mappedBy = "category")

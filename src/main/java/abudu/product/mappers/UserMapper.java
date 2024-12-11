@@ -21,6 +21,8 @@ public class UserMapper {
         userDTO.setCreatedAt(user.getCreatedAt());
         userDTO.setUpdatedAt(user.getUpdatedAt());
         userDTO.setRole(user.getRole());
+        userDTO.setCart(user.getCart());
+        userDTO.setSalt(user.getSalt());
 
         return userDTO;
     }
@@ -40,6 +42,8 @@ public class UserMapper {
         user.setCreatedAt(userDTO.getCreatedAt());
         user.setUpdatedAt(userDTO.getUpdatedAt());
         user.setRole(userDTO.getRole());
+        user.setCart(userDTO.getCart());
+        user.setSalt(userDTO.getSalt());
         return user;
     }
 }

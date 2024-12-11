@@ -36,10 +36,13 @@ public class User {
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
     private List<Order> orders;
 
+    @Lob
+    private byte[] salt;
+
     public User() {
     }
 
-    public User(Long id, String email, String password,String username, String firstName, String lastName, boolean active, LocalDateTime createdAt, LocalDateTime updatedAt, Role role, Cart cart, List<Order> orders) {
+    public User(Long id, String email, String password,String username, String firstName, String lastName, boolean active, LocalDateTime createdAt, LocalDateTime updatedAt, Role role, Cart cart, List<Order> orders, byte[] salt) {
         this.id = id;
         this.email = email;
         this.password = password;
@@ -52,6 +55,7 @@ public class User {
         this.role = role;
         this.cart = cart;
         this.orders = orders;
+        this.salt = salt;
     }
 
     public Long getId() {
@@ -149,6 +153,14 @@ public class User {
         this.username = username;
     }
 
+    public byte[] getSalt() {
+        return salt;
+    }
+
+    public void setSalt(byte[] salt) {
+        this.salt = salt;
+    }
+
     @Override
     public String toString() {
         return "User{" +
@@ -164,6 +176,7 @@ public class User {
                 ", role=" + role +
                 ", cart=" + cart +
                 ", orders=" + orders +
+                ", salt=" + salt +
                 '}';
     }
 }

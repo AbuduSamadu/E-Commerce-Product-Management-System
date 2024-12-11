@@ -16,6 +16,11 @@ public class GlobalExceptionHandler {
     public ResponseEntity<String> handlerBadRequestException(BadRequestException e){
         return new ResponseEntity<>(e.getMessage(), HttpStatus.BAD_REQUEST);
     }
+    @ExceptionHandler(InvalidCredentialException.class)
+    public ResponseEntity<String> handlerInvalidCredentialException(InvalidCredentialException e){
+        return new ResponseEntity<>(e.getMessage(), HttpStatus.UNAUTHORIZED);
+    }
+
 
     @ExceptionHandler(InternalServerException.class)
     public ResponseEntity<String> handlerInternalServerException(InternalServerException e){
@@ -26,6 +31,7 @@ public class GlobalExceptionHandler {
     public ResponseEntity<String> handlerResourcesAlreadyExitsException(ResourcesAlreadyExitsException e){
         return new ResponseEntity<>(e.getMessage(), HttpStatus.CONFLICT);
     }
+
 
     @ExceptionHandler(Exception.class)
     public ResponseEntity<String> handlerException(Exception e){

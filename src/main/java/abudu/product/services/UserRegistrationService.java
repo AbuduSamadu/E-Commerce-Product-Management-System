@@ -40,9 +40,11 @@ public class UserRegistrationService {
         user.setPassword(userDTO.getPassword());
         user.setActive(true);
 
+        // Generate and set the salt
+        byte[] salt = SecurityUtil.generateSalt();
+        user.setSalt(salt);
 
         // Hash the password before saving
-        byte[] salt = SecurityUtil.generateSalt();
         String hashedPassword = SecurityUtil.hashPassword(userDTO.getPassword(), salt);
         user.setPassword(hashedPassword);
 

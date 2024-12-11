@@ -22,10 +22,12 @@ public class UserDTO {
     private Cart cart;
     private List<OrderDTO> orders;
 
+    private byte[] salt;
+
     public UserDTO() {
     }
 
-    public UserDTO(Long id, String username, String email, String password, String firstName,String lastName, boolean active, Role role, LocalDateTime createdAt, LocalDateTime updatedAt, Cart cart, List<OrderDTO> orders) {
+    public UserDTO(Long id,byte[] salt, String username, String email, String password, String firstName,String lastName, boolean active, Role role, LocalDateTime createdAt, LocalDateTime updatedAt, Cart cart, List<OrderDTO> orders) {
         this.id = id;
         this.username = username;
         this.email = email;
@@ -38,9 +40,16 @@ public class UserDTO {
         this.updatedAt = updatedAt;
         this.cart = cart;
         this.orders = orders;
+        this.salt = salt;
     }
 
 
+    public byte[] getSalt() {
+        return salt;
+    }
+    public void setSalt(byte[] salt) {
+        this.salt = salt;
+    }
 
     public Long getId() {
         return id;
@@ -151,6 +160,7 @@ public class UserDTO {
                 ", updatedAt=" + updatedAt +
                 ", cart=" + cart +
                 ", orders=" + orders +
+                ", salt=" + salt +
                 '}';
     }
 

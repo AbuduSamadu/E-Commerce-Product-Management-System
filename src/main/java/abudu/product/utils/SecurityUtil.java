@@ -30,7 +30,7 @@ public class SecurityUtil {
         return salt;
     }
 
-    public static boolean validatePassword(String inputPassword, String hashedPassword) {
-        return hashedPassword.equals(hashPassword(inputPassword, new byte[16]));
+    public static boolean validatePassword(String inputPassword, String hashedPassword, byte[] salt) {
+        return hashedPassword.equals(hashPassword(inputPassword, salt));
     }
 }
