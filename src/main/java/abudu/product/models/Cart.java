@@ -25,18 +25,27 @@ public class Cart {
     )
     private List<Product> products;
 
+    @OneToMany(mappedBy = "cart", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<CartItem> cartItems;
+
     private double totalPrice;
 
     // Constructors
     public Cart() {
     }
 
-    public Cart(Long id, User user, List<Product> products, double totalPrice) {
+    public Cart(Long id, User user, List<Product> products, double totalPrice, List<CartItem> cartItems) {
         this.id = id;
         this.user = user;
         this.products = products;
         this.totalPrice = totalPrice;
+        this.cartItems = cartItems;
     }
+
+    public Cart(Long id) {
+        this.id = id;
+    }
+
 
     // Getters and Setters
 
@@ -73,6 +82,14 @@ public class Cart {
         this.totalPrice = totalPrice;
     }
 
+    public List<CartItem> getCartItems() {
+        return cartItems;
+    }
+
+    public void setCartItems(List<CartItem> cartItems) {
+        this.cartItems = cartItems;
+    }
+
 
     // toString
     @Override
@@ -82,6 +99,7 @@ public class Cart {
                 ", user=" + user +
                 ", products=" + products +
                 ", totalPrice=" + totalPrice +
+                ", cartItems=" + cartItems +
                 '}';
     }
 
