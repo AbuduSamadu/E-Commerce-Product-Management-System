@@ -3,6 +3,7 @@ package abudu.product.dto;
 import abudu.product.models.Category;
 
 import java.math.BigDecimal;
+import java.time.LocalDateTime;
 
 public class ProductDTO {
     private Long id;
@@ -12,13 +13,13 @@ public class ProductDTO {
     private String imgUrl;
     private Category categoryId;
     private int stock;
-    private String createdAt;
-    private String updatedAt;
+    private LocalDateTime createdAt;
+    private LocalDateTime updatedAt;
 
     public ProductDTO() {
     }
 
-    public ProductDTO(Long id, String name, String description, BigDecimal price, String imgUrl, Category categoryId, int stock, String createdAt, String updatedAt) {
+    public ProductDTO(Long id, String name, String description, BigDecimal price, String imgUrl, Category categoryId, int stock, LocalDateTime createdAt, LocalDateTime updatedAt) {
         this.id = id;
         this.name = name;
         this.description = description;
@@ -87,21 +88,22 @@ public class ProductDTO {
         this.stock = stock;
     }
 
-    public String getCreatedAt() {
+    public LocalDateTime getCreatedAt() {
         return createdAt;
     }
 
-    public void setCreatedAt(String createdAt) {
+    public void setCreatedAt(LocalDateTime createdAt) {
         this.createdAt = createdAt;
     }
 
-    public String getUpdatedAt() {
+    public LocalDateTime getUpdatedAt() {
         return updatedAt;
     }
 
-    public void setUpdatedAt(String updatedAt) {
+    public void setUpdatedAt(LocalDateTime updatedAt) {
         this.updatedAt = updatedAt;
     }
+
 
     // toString
 
@@ -119,4 +121,6 @@ public class ProductDTO {
                 ", updatedAt='" + updatedAt + '\'' +
                 '}';
     }
+
+
 }

@@ -4,8 +4,10 @@ import abudu.product.exceptions.ResourceNotFoundException;
 import abudu.product.models.Cart;
 import abudu.product.models.CartItem;
 import abudu.product.models.Product;
+import abudu.product.models.User;
 import abudu.product.repositories.CartRepository;
 import abudu.product.repositories.ProductRepository;
+import abudu.product.repositories.UserRepository;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -14,17 +16,24 @@ public class CartService {
 
     private final CartRepository cartRepository;
     private final ProductRepository productRepository;
+    private final UserRepository userRepository;
 
-    public CartService(CartRepository cartRepository, ProductRepository productRepository) {
+    public CartService(CartRepository cartRepository, ProductRepository productRepository, UserRepository userRepository) {
         this.cartRepository = cartRepository;
         this.productRepository = productRepository;
+        this.userRepository = userRepository;
     }
 
     @Transactional
-    public Cart addToCart(Long Id, String productId, int quantity) {
-        // Fetch cart or create a new one
-        Cart cart = cartRepository.findById(Id).orElseGet(() -> {
-            return new Cart(Id);
+    public Cart addToCart(Long userId, String productId, int quantity) {
+        User user = userRepository.findById(userId)
+                .orElseThrow(() -> new ResourceNotFoundException("User not found: " + userId));
+
+        // Fetch or create cart
+        Cart cart = cartRepository.findByUserId(userId).orElseGet(() -> {
+            Cart newCart = new Cart();
+            newCart.setUser(user);
+            return newCart;
         });
 
         // Fetch product and check stock
@@ -53,9 +62,13 @@ public class CartService {
     }
 
     @Transactional
-    public Cart removeFromCart(Long Id, Long productId, int quantity) {
-        Cart cart = cartRepository.findById(Id)
-                .orElseThrow(() -> new ResourceNotFoundException("Cart not found: " +Id));
+    public Cart removeFromCart(Long userId, Long productId, int quantity) {
+        User user = userRepository.findById(userId)
+                .orElseThrow(() -> new ResourceNotFoundException("User not found: " + userId));
+
+        // Fetch cart
+        Cart cart = cartRepository.findByUserId(userId)
+                .orElseThrow(() -> new ResourceNotFoundException("Cart not found for user: " + userId));
 
         CartItem cartItem = cart.getCartItems().stream()
                 .filter(item -> item.getProduct().getId().equals(productId))
@@ -74,15 +87,15 @@ public class CartService {
 
         // Restore stock
         Product product = cartItem.getProduct();
-        product.setStock(product.getStock()+ quantity);
+        product.setStock(product.getStock() + quantity);
         productRepository.save(product);
 
         // Save the cart
         return cartRepository.save(cart);
     }
 
-    public Cart getCart(Long Id) {
-        return cartRepository.findById(Id)
-                .orElseThrow(() -> new ResourceNotFoundException("Cart not found: " + Id));
+    public Cart getCart(Long id) {
+        return cartRepository.findById(id)
+                .orElseThrow(() -> new ResourceNotFoundException("Cart not found: " + id));
     }
 }

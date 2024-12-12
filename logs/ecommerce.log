@@ -5279,3 +5279,478 @@ Caused by: javax.net.ssl.SSLException: (internal_error) Received fatal alert: in
 2024-12-12T03:24:00.028Z  INFO 35300 --- [ecommerce-project] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
 2024-12-12T03:24:00.035Z  INFO 35300 --- [ecommerce-project] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2024-12-12T03:24:00.051Z  INFO 35300 --- [ecommerce-project] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-12-12T03:24:16.746Z  INFO 29036 --- [ecommerce-project] [main] abudu.product.ProductApplication         : Starting ProductApplication using Java 23.0.1 with PID 29036 (C:\Users\AbuduSamadu\Documents\Product Management System\product\target\classes started by AbuduSamadu in C:\Users\AbuduSamadu\Documents\Product Management System\product)
+2024-12-12T03:24:16.783Z  INFO 29036 --- [ecommerce-project] [main] abudu.product.ProductApplication         : The following 1 profile is active: "dev"
+2024-12-12T03:24:19.900Z  INFO 29036 --- [ecommerce-project] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-12-12T03:24:19.904Z  INFO 29036 --- [ecommerce-project] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-12-12T03:24:19.985Z  INFO 29036 --- [ecommerce-project] [main] .RepositoryConfigurationExtensionSupport : Spring Data JPA - Could not safely identify store assignment for repository candidate interface abudu.product.repositories.AuditLogRepository; If you want this repository to be a JPA repository, consider annotating your entities with one of these annotations: jakarta.persistence.Entity, jakarta.persistence.MappedSuperclass (preferred), or consider extending one of the following types with your repository: org.springframework.data.jpa.repository.JpaRepository
+2024-12-12T03:24:20.065Z  INFO 29036 --- [ecommerce-project] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 140 ms. Found 5 JPA repository interfaces.
+2024-12-12T03:24:20.089Z  INFO 29036 --- [ecommerce-project] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-12-12T03:24:20.089Z  INFO 29036 --- [ecommerce-project] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2024-12-12T03:24:20.109Z  INFO 29036 --- [ecommerce-project] [main] .RepositoryConfigurationExtensionSupport : Spring Data MongoDB - Could not safely identify store assignment for repository candidate interface abudu.product.repositories.CartRepository; If you want this repository to be a MongoDB repository, consider annotating your entities with one of these annotations: org.springframework.data.mongodb.core.mapping.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.mongodb.repository.MongoRepository
+2024-12-12T03:24:20.110Z  INFO 29036 --- [ecommerce-project] [main] .RepositoryConfigurationExtensionSupport : Spring Data MongoDB - Could not safely identify store assignment for repository candidate interface abudu.product.repositories.CategoryRepository; If you want this repository to be a MongoDB repository, consider annotating your entities with one of these annotations: org.springframework.data.mongodb.core.mapping.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.mongodb.repository.MongoRepository
+2024-12-12T03:24:20.110Z  INFO 29036 --- [ecommerce-project] [main] .RepositoryConfigurationExtensionSupport : Spring Data MongoDB - Could not safely identify store assignment for repository candidate interface abudu.product.repositories.OrderRepository; If you want this repository to be a MongoDB repository, consider annotating your entities with one of these annotations: org.springframework.data.mongodb.core.mapping.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.mongodb.repository.MongoRepository
+2024-12-12T03:24:20.111Z  INFO 29036 --- [ecommerce-project] [main] .RepositoryConfigurationExtensionSupport : Spring Data MongoDB - Could not safely identify store assignment for repository candidate interface abudu.product.repositories.ProductRepository; If you want this repository to be a MongoDB repository, consider annotating your entities with one of these annotations: org.springframework.data.mongodb.core.mapping.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.mongodb.repository.MongoRepository
+2024-12-12T03:24:20.113Z  INFO 29036 --- [ecommerce-project] [main] .RepositoryConfigurationExtensionSupport : Spring Data MongoDB - Could not safely identify store assignment for repository candidate interface abudu.product.repositories.UserRepository; If you want this repository to be a MongoDB repository, consider annotating your entities with one of these annotations: org.springframework.data.mongodb.core.mapping.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.mongodb.repository.MongoRepository
+2024-12-12T03:24:20.123Z  INFO 29036 --- [ecommerce-project] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 32 ms. Found 1 MongoDB repository interface.
+2024-12-12T03:24:21.773Z  INFO 29036 --- [ecommerce-project] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9090 (http)
+2024-12-12T03:24:21.818Z  INFO 29036 --- [ecommerce-project] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-12-12T03:24:21.819Z  INFO 29036 --- [ecommerce-project] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.33]
+2024-12-12T03:24:22.072Z  INFO 29036 --- [ecommerce-project] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-12-12T03:24:22.076Z  INFO 29036 --- [ecommerce-project] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 5152 ms
+2024-12-12T03:24:22.528Z DEBUG 29036 --- [ecommerce-project] [main] o.s.w.f.ServerHttpObservationFilter      : Filter 'webMvcObservationFilter' configured for use
+2024-12-12T03:24:22.984Z  INFO 29036 --- [ecommerce-project] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-12-12T03:24:23.206Z  INFO 29036 --- [ecommerce-project] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.2.Final
+2024-12-12T03:24:23.276Z  INFO 29036 --- [ecommerce-project] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-12-12T03:24:23.978Z  INFO 29036 --- [ecommerce-project] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-12-12T03:24:24.109Z  INFO 29036 --- [ecommerce-project] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-12-12T03:24:24.645Z  INFO 29036 --- [ecommerce-project] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@2211e731
+2024-12-12T03:24:24.648Z  INFO 29036 --- [ecommerce-project] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-12-12T03:24:24.828Z  INFO 29036 --- [ecommerce-project] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 16.4
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2024-12-12T03:24:28.903Z  INFO 29036 --- [ecommerce-project] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-12-12T03:24:29.321Z  INFO 29036 --- [ecommerce-project] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-12-12T03:24:29.818Z  INFO 29036 --- [ecommerce-project] [main] org.mongodb.driver.client                : MongoClient with metadata {"application": {"name": "Cluster0"}, "driver": {"name": "mongo-java-driver|sync|spring-boot", "version": "5.2.1"}, "os": {"type": "Windows", "name": "Windows 10", "architecture": "amd64", "version": "10.0"}, "platform": "Java/Oracle Corporation/23.0.1+11-39"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=majority, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=MongoCredential{mechanism=null, userName='abudusamed', source='admin', password=<hidden>, mechanismProperties=<hidden>}, transportSettings=null, commandListeners=[io.micrometer.core.instrument.binder.mongodb.MongoMetricsCommandListener@52dc71b2], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, CollectionCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, EnumCodecProvider{}, com.mongodb.client.model.mql.ExpressionCodecProvider@579cfcc4, com.mongodb.Jep395RecordCodecProvider@57eb2555, com.mongodb.KotlinCodecProvider@490f2fad]}, loggerSettings=LoggerSettings{maxDocumentLength=1000}, clusterSettings={hosts=[127.0.0.1:27017], srvHost=cluster0.s5opd.mongodb.net, srvServiceName=mongodb, mode=MULTIPLE, requiredClusterType=REPLICA_SET, requiredReplicaSetName='atlas-g8q5qp-shard-0', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='15 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[io.micrometer.core.instrument.binder.mongodb.MongoMetricsConnectionPoolListener@294c36b9], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverMonitoringMode=AUTO, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=true, invalidHostNameAllowed=false, context=null}, applicationName='Cluster0', compressorList=[], uuidRepresentation=JAVA_LEGACY, serverApi=null, autoEncryptionSettings=null, dnsClient=null, inetAddressResolver=null, contextProvider=null, timeoutMS=null}
+2024-12-12T03:24:29.867Z  INFO 29036 --- [ecommerce-project] [cluster-ClusterId{value='675a576dac4a71047c924642', description='Cluster0'}-srv-cluster0.s5opd.mongodb.net] org.mongodb.driver.cluster               : Adding discovered server cluster0-shard-00-00.s5opd.mongodb.net:27017 to client view of cluster
+2024-12-12T03:24:29.939Z  INFO 29036 --- [ecommerce-project] [cluster-ClusterId{value='675a576dac4a71047c924642', description='Cluster0'}-srv-cluster0.s5opd.mongodb.net] org.mongodb.driver.cluster               : Adding discovered server cluster0-shard-00-01.s5opd.mongodb.net:27017 to client view of cluster
+2024-12-12T03:24:29.944Z  INFO 29036 --- [ecommerce-project] [cluster-ClusterId{value='675a576dac4a71047c924642', description='Cluster0'}-srv-cluster0.s5opd.mongodb.net] org.mongodb.driver.cluster               : Adding discovered server cluster0-shard-00-02.s5opd.mongodb.net:27017 to client view of cluster
+2024-12-12T03:24:30.923Z  INFO 29036 --- [ecommerce-project] [cluster-ClusterId{value='675a576dac4a71047c924642', description='Cluster0'}-cluster0-shard-00-01.s5opd.mongodb.net:27017] org.mongodb.driver.cluster               : Exception in monitor thread while connecting to server cluster0-shard-00-01.s5opd.mongodb.net:27017
+
+com.mongodb.MongoSocketWriteException: Exception sending message
+	at com.mongodb.internal.connection.InternalStreamConnection.throwTranslatedWriteException(InternalStreamConnection.java:790) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.sendMessage(InternalStreamConnection.java:675) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.trySendMessage(InternalStreamConnection.java:507) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.sendCommandMessage(InternalStreamConnection.java:482) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.sendAndReceiveInternal(InternalStreamConnection.java:440) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.lambda$sendAndReceive$0(InternalStreamConnection.java:375) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.sendAndReceive(InternalStreamConnection.java:378) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.CommandHelper.sendAndReceive(CommandHelper.java:100) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.CommandHelper.executeCommand(CommandHelper.java:49) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnectionInitializer.initializeConnectionDescription(InternalStreamConnectionInitializer.java:144) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnectionInitializer.startHandshake(InternalStreamConnectionInitializer.java:79) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.open(InternalStreamConnection.java:235) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.lookupServerDescription(DefaultServerMonitor.java:219) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.run(DefaultServerMonitor.java:176) ~[mongodb-driver-core-5.2.1.jar:na]
+Caused by: javax.net.ssl.SSLException: (internal_error) Received fatal alert: internal_error
+	at java.base/sun.security.ssl.Alert.createSSLException(Alert.java:132) ~[na:na]
+	at java.base/sun.security.ssl.Alert.createSSLException(Alert.java:117) ~[na:na]
+	at java.base/sun.security.ssl.TransportContext.fatal(TransportContext.java:370) ~[na:na]
+	at java.base/sun.security.ssl.Alert$AlertConsumer.consume(Alert.java:287) ~[na:na]
+	at java.base/sun.security.ssl.TransportContext.dispatch(TransportContext.java:209) ~[na:na]
+	at java.base/sun.security.ssl.SSLTransport.decode(SSLTransport.java:172) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketImpl.decode(SSLSocketImpl.java:1507) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketImpl.readHandshakeRecord(SSLSocketImpl.java:1422) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:455) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketImpl.ensureNegotiated(SSLSocketImpl.java:924) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketImpl$AppOutputStream.write(SSLSocketImpl.java:1293) ~[na:na]
+	at com.mongodb.internal.connection.SocketStream.write(SocketStream.java:165) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.sendMessage(InternalStreamConnection.java:672) ~[mongodb-driver-core-5.2.1.jar:na]
+	... 12 common frames omitted
+
+2024-12-12T03:24:30.923Z  INFO 29036 --- [ecommerce-project] [cluster-ClusterId{value='675a576dac4a71047c924642', description='Cluster0'}-cluster0-shard-00-02.s5opd.mongodb.net:27017] org.mongodb.driver.cluster               : Exception in monitor thread while connecting to server cluster0-shard-00-02.s5opd.mongodb.net:27017
+
+com.mongodb.MongoSocketWriteException: Exception sending message
+	at com.mongodb.internal.connection.InternalStreamConnection.throwTranslatedWriteException(InternalStreamConnection.java:790) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.sendMessage(InternalStreamConnection.java:675) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.trySendMessage(InternalStreamConnection.java:507) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.sendCommandMessage(InternalStreamConnection.java:482) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.sendAndReceiveInternal(InternalStreamConnection.java:440) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.lambda$sendAndReceive$0(InternalStreamConnection.java:375) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.sendAndReceive(InternalStreamConnection.java:378) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.CommandHelper.sendAndReceive(CommandHelper.java:100) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.CommandHelper.executeCommand(CommandHelper.java:49) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnectionInitializer.initializeConnectionDescription(InternalStreamConnectionInitializer.java:144) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnectionInitializer.startHandshake(InternalStreamConnectionInitializer.java:79) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.open(InternalStreamConnection.java:235) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.lookupServerDescription(DefaultServerMonitor.java:219) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.run(DefaultServerMonitor.java:176) ~[mongodb-driver-core-5.2.1.jar:na]
+Caused by: javax.net.ssl.SSLException: (internal_error) Received fatal alert: internal_error
+	at java.base/sun.security.ssl.Alert.createSSLException(Alert.java:132) ~[na:na]
+	at java.base/sun.security.ssl.Alert.createSSLException(Alert.java:117) ~[na:na]
+	at java.base/sun.security.ssl.TransportContext.fatal(TransportContext.java:370) ~[na:na]
+	at java.base/sun.security.ssl.Alert$AlertConsumer.consume(Alert.java:287) ~[na:na]
+	at java.base/sun.security.ssl.TransportContext.dispatch(TransportContext.java:209) ~[na:na]
+	at java.base/sun.security.ssl.SSLTransport.decode(SSLTransport.java:172) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketImpl.decode(SSLSocketImpl.java:1507) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketImpl.readHandshakeRecord(SSLSocketImpl.java:1422) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:455) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketImpl.ensureNegotiated(SSLSocketImpl.java:924) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketImpl$AppOutputStream.write(SSLSocketImpl.java:1293) ~[na:na]
+	at com.mongodb.internal.connection.SocketStream.write(SocketStream.java:165) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.sendMessage(InternalStreamConnection.java:672) ~[mongodb-driver-core-5.2.1.jar:na]
+	... 12 common frames omitted
+
+2024-12-12T03:24:30.923Z  INFO 29036 --- [ecommerce-project] [cluster-ClusterId{value='675a576dac4a71047c924642', description='Cluster0'}-cluster0-shard-00-00.s5opd.mongodb.net:27017] org.mongodb.driver.cluster               : Exception in monitor thread while connecting to server cluster0-shard-00-00.s5opd.mongodb.net:27017
+
+com.mongodb.MongoSocketWriteException: Exception sending message
+	at com.mongodb.internal.connection.InternalStreamConnection.throwTranslatedWriteException(InternalStreamConnection.java:790) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.sendMessage(InternalStreamConnection.java:675) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.trySendMessage(InternalStreamConnection.java:507) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.sendCommandMessage(InternalStreamConnection.java:482) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.sendAndReceiveInternal(InternalStreamConnection.java:440) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.lambda$sendAndReceive$0(InternalStreamConnection.java:375) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.sendAndReceive(InternalStreamConnection.java:378) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.CommandHelper.sendAndReceive(CommandHelper.java:100) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.CommandHelper.executeCommand(CommandHelper.java:49) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnectionInitializer.initializeConnectionDescription(InternalStreamConnectionInitializer.java:144) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnectionInitializer.startHandshake(InternalStreamConnectionInitializer.java:79) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.open(InternalStreamConnection.java:235) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.lookupServerDescription(DefaultServerMonitor.java:219) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.run(DefaultServerMonitor.java:176) ~[mongodb-driver-core-5.2.1.jar:na]
+Caused by: javax.net.ssl.SSLException: (internal_error) Received fatal alert: internal_error
+	at java.base/sun.security.ssl.Alert.createSSLException(Alert.java:132) ~[na:na]
+	at java.base/sun.security.ssl.Alert.createSSLException(Alert.java:117) ~[na:na]
+	at java.base/sun.security.ssl.TransportContext.fatal(TransportContext.java:370) ~[na:na]
+	at java.base/sun.security.ssl.Alert$AlertConsumer.consume(Alert.java:287) ~[na:na]
+	at java.base/sun.security.ssl.TransportContext.dispatch(TransportContext.java:209) ~[na:na]
+	at java.base/sun.security.ssl.SSLTransport.decode(SSLTransport.java:172) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketImpl.decode(SSLSocketImpl.java:1507) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketImpl.readHandshakeRecord(SSLSocketImpl.java:1422) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:455) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketImpl.ensureNegotiated(SSLSocketImpl.java:924) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketImpl$AppOutputStream.write(SSLSocketImpl.java:1293) ~[na:na]
+	at com.mongodb.internal.connection.SocketStream.write(SocketStream.java:165) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.sendMessage(InternalStreamConnection.java:672) ~[mongodb-driver-core-5.2.1.jar:na]
+	... 12 common frames omitted
+
+2024-12-12T03:24:31.282Z  INFO 29036 --- [ecommerce-project] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-12-12T03:24:32.150Z  WARN 29036 --- [ecommerce-project] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-12-12T03:24:32.373Z DEBUG 29036 --- [ecommerce-project] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 18 mappings in 'requestMappingHandlerMapping'
+2024-12-12T03:24:32.606Z DEBUG 29036 --- [ecommerce-project] [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2024-12-12T03:24:32.673Z DEBUG 29036 --- [ecommerce-project] [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-12-12T03:24:32.788Z DEBUG 29036 --- [ecommerce-project] [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-12-12T03:24:33.776Z  INFO 29036 --- [ecommerce-project] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2024-12-12T03:24:34.113Z  INFO 29036 --- [ecommerce-project] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 9090 (http) with context path '/'
+2024-12-12T03:24:34.196Z  INFO 29036 --- [ecommerce-project] [main] abudu.product.ProductApplication         : Started ProductApplication in 19.007 seconds (process running for 20.838)
+2024-12-12T03:24:35.289Z  INFO 29036 --- [ecommerce-project] [RMI TCP Connection(10)-172.22.80.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-12-12T03:24:35.289Z  INFO 29036 --- [ecommerce-project] [RMI TCP Connection(10)-172.22.80.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-12-12T03:24:35.290Z DEBUG 29036 --- [ecommerce-project] [RMI TCP Connection(10)-172.22.80.1] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2024-12-12T03:24:35.290Z DEBUG 29036 --- [ecommerce-project] [RMI TCP Connection(10)-172.22.80.1] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
+2024-12-12T03:24:35.291Z DEBUG 29036 --- [ecommerce-project] [RMI TCP Connection(10)-172.22.80.1] o.s.web.servlet.DispatcherServlet        : Detected FixedThemeResolver
+2024-12-12T03:24:35.293Z DEBUG 29036 --- [ecommerce-project] [RMI TCP Connection(10)-172.22.80.1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@6434827e
+2024-12-12T03:24:35.294Z DEBUG 29036 --- [ecommerce-project] [RMI TCP Connection(10)-172.22.80.1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@34723cfe
+2024-12-12T03:24:35.295Z DEBUG 29036 --- [ecommerce-project] [RMI TCP Connection(10)-172.22.80.1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2024-12-12T03:24:35.295Z  INFO 29036 --- [ecommerce-project] [RMI TCP Connection(10)-172.22.80.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 6 ms
+2024-12-12T03:24:35.448Z  INFO 29036 --- [ecommerce-project] [RMI TCP Connection(11)-172.22.80.1] org.mongodb.driver.cluster               : Waiting for server to become available for operation with ID 5. Remaining time: 29964 ms. Selector: ReadPreferenceServerSelector{readPreference=primary}, topology description: {type=REPLICA_SET, servers=[{address=cluster0-shard-00-00.s5opd.mongodb.net:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketWriteException: Exception sending message}, caused by {javax.net.ssl.SSLException: (internal_error) Received fatal alert: internal_error}}, {address=cluster0-shard-00-01.s5opd.mongodb.net:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketWriteException: Exception sending message}, caused by {javax.net.ssl.SSLException: (internal_error) Received fatal alert: internal_error}}, {address=cluster0-shard-00-02.s5opd.mongodb.net:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketWriteException: Exception sending message}, caused by {javax.net.ssl.SSLException: (internal_error) Received fatal alert: internal_error}}].
+2024-12-12T03:25:04.920Z DEBUG 29036 --- [ecommerce-project] [http-nio-9090-exec-2] o.s.web.servlet.DispatcherServlet        : POST "/api/v1/categories/add", parameters={}
+2024-12-12T03:25:04.937Z DEBUG 29036 --- [ecommerce-project] [http-nio-9090-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to abudu.product.controllers.CategoryController#addCategory(Category)
+2024-12-12T03:25:05.107Z DEBUG 29036 --- [ecommerce-project] [http-nio-9090-exec-2] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [Category{id=null, name='Electronics', parentCategory=null, subcategories=null, products=null, descri (truncated)...]
+2024-12-12T03:25:05.243Z DEBUG 29036 --- [ecommerce-project] [http-nio-9090-exec-2] org.hibernate.SQL                        : insert into categories (description,name,parent_category_id) values (?,?,?)
+2024-12-12T03:25:05.424Z DEBUG 29036 --- [ecommerce-project] [http-nio-9090-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'text/plain', given [*/*] and supported [text/plain, */*, application/json, application/*+json]
+2024-12-12T03:25:05.425Z DEBUG 29036 --- [ecommerce-project] [http-nio-9090-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing ["Category added successfully: Electronics"]
+2024-12-12T03:25:05.424Z  WARN 29036 --- [ecommerce-project] [RMI TCP Connection(11)-172.22.80.1] o.s.b.a.data.mongo.MongoHealthIndicator  : MongoDB health check failed
+
+org.springframework.dao.DataAccessResourceFailureException: Timed out while waiting for a server that matches ReadPreferenceServerSelector{readPreference=primary}. Client view of cluster state is {type=REPLICA_SET, servers=[{address=cluster0-shard-00-00.s5opd.mongodb.net:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketWriteException: Exception sending message}, caused by {javax.net.ssl.SSLException: (internal_error) Received fatal alert: internal_error}}, {address=cluster0-shard-00-01.s5opd.mongodb.net:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketWriteException: Exception sending message}, caused by {javax.net.ssl.SSLException: (internal_error) Received fatal alert: internal_error}}, {address=cluster0-shard-00-02.s5opd.mongodb.net:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketWriteException: Exception sending message}, caused by {javax.net.ssl.SSLException: (internal_error) Received fatal alert: internal_error}}]
+	at org.springframework.data.mongodb.core.MongoExceptionTranslator.doTranslateException(MongoExceptionTranslator.java:97) ~[spring-data-mongodb-4.4.0.jar:4.4.0]
+	at org.springframework.data.mongodb.core.MongoExceptionTranslator.translateExceptionIfPossible(MongoExceptionTranslator.java:74) ~[spring-data-mongodb-4.4.0.jar:4.4.0]
+	at org.springframework.data.mongodb.core.MongoTemplate.potentiallyConvertRuntimeException(MongoTemplate.java:3008) ~[spring-data-mongodb-4.4.0.jar:4.4.0]
+	at org.springframework.data.mongodb.core.MongoTemplate.execute(MongoTemplate.java:584) ~[spring-data-mongodb-4.4.0.jar:4.4.0]
+	at org.springframework.data.mongodb.core.MongoTemplate.executeCommand(MongoTemplate.java:516) ~[spring-data-mongodb-4.4.0.jar:4.4.0]
+	at org.springframework.boot.actuate.data.mongo.MongoHealthIndicator.doHealthCheck(MongoHealthIndicator.java:46) ~[spring-boot-actuator-3.4.0.jar:3.4.0]
+	at org.springframework.boot.actuate.health.AbstractHealthIndicator.health(AbstractHealthIndicator.java:82) ~[spring-boot-actuator-3.4.0.jar:3.4.0]
+	at org.springframework.boot.actuate.health.HealthIndicator.getHealth(HealthIndicator.java:37) ~[spring-boot-actuator-3.4.0.jar:3.4.0]
+	at org.springframework.boot.actuate.health.HealthEndpoint.getHealth(HealthEndpoint.java:82) ~[spring-boot-actuator-3.4.0.jar:3.4.0]
+	at org.springframework.boot.actuate.health.HealthEndpoint.getHealth(HealthEndpoint.java:41) ~[spring-boot-actuator-3.4.0.jar:3.4.0]
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getLoggedHealth(HealthEndpointSupport.java:172) ~[spring-boot-actuator-3.4.0.jar:3.4.0]
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getContribution(HealthEndpointSupport.java:145) ~[spring-boot-actuator-3.4.0.jar:3.4.0]
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getAggregateContribution(HealthEndpointSupport.java:156) ~[spring-boot-actuator-3.4.0.jar:3.4.0]
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getContribution(HealthEndpointSupport.java:141) ~[spring-boot-actuator-3.4.0.jar:3.4.0]
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getHealth(HealthEndpointSupport.java:110) ~[spring-boot-actuator-3.4.0.jar:3.4.0]
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getHealth(HealthEndpointSupport.java:81) ~[spring-boot-actuator-3.4.0.jar:3.4.0]
+	at org.springframework.boot.actuate.health.HealthEndpoint.health(HealthEndpoint.java:76) ~[spring-boot-actuator-3.4.0.jar:3.4.0]
+	at org.springframework.boot.actuate.health.HealthEndpoint.health(HealthEndpoint.java:66) ~[spring-boot-actuator-3.4.0.jar:3.4.0]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:281) ~[spring-core-6.2.0.jar:6.2.0]
+	at org.springframework.boot.actuate.endpoint.invoke.reflect.ReflectiveOperationInvoker.invoke(ReflectiveOperationInvoker.java:74) ~[spring-boot-actuator-3.4.0.jar:3.4.0]
+	at org.springframework.boot.actuate.endpoint.annotation.AbstractDiscoveredOperation.invoke(AbstractDiscoveredOperation.java:60) ~[spring-boot-actuator-3.4.0.jar:3.4.0]
+	at org.springframework.boot.actuate.endpoint.jmx.EndpointMBean.invoke(EndpointMBean.java:124) ~[spring-boot-actuator-3.4.0.jar:3.4.0]
+	at org.springframework.boot.actuate.endpoint.jmx.EndpointMBean.invoke(EndpointMBean.java:97) ~[spring-boot-actuator-3.4.0.jar:3.4.0]
+	at java.management/com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.invoke(DefaultMBeanServerInterceptor.java:803) ~[na:na]
+	at java.management/com.sun.jmx.mbeanserver.JmxMBeanServer.invoke(JmxMBeanServer.java:802) ~[na:na]
+	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl.doOperation(RMIConnectionImpl.java:1520) ~[na:na]
+	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl$PrivilegedOperation.run(RMIConnectionImpl.java:1348) ~[na:na]
+	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl.doPrivilegedOperation(RMIConnectionImpl.java:1435) ~[na:na]
+	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl.invoke(RMIConnectionImpl.java:841) ~[na:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at java.rmi/sun.rmi.server.UnicastServerRef.dispatch(UnicastServerRef.java:360) ~[na:na]
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:200) ~[na:na]
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:197) ~[na:na]
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:714) ~[na:na]
+	at java.rmi/sun.rmi.transport.Transport.serviceCall(Transport.java:196) ~[na:na]
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:598) ~[na:na]
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:844) ~[na:na]
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.lambda$run$0(TCPTransport.java:721) ~[na:na]
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:400) ~[na:na]
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:720) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:1575) ~[na:na]
+Caused by: com.mongodb.MongoTimeoutException: Timed out while waiting for a server that matches ReadPreferenceServerSelector{readPreference=primary}. Client view of cluster state is {type=REPLICA_SET, servers=[{address=cluster0-shard-00-00.s5opd.mongodb.net:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketWriteException: Exception sending message}, caused by {javax.net.ssl.SSLException: (internal_error) Received fatal alert: internal_error}}, {address=cluster0-shard-00-01.s5opd.mongodb.net:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketWriteException: Exception sending message}, caused by {javax.net.ssl.SSLException: (internal_error) Received fatal alert: internal_error}}, {address=cluster0-shard-00-02.s5opd.mongodb.net:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketWriteException: Exception sending message}, caused by {javax.net.ssl.SSLException: (internal_error) Received fatal alert: internal_error}}]
+	at com.mongodb.internal.connection.BaseCluster.logAndThrowTimeoutException(BaseCluster.java:427) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.BaseCluster.lambda$selectServer$0(BaseCluster.java:154) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.time.Timeout.lambda$onExistsAndExpired$16(Timeout.java:236) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.time.Timeout.lambda$run$10(Timeout.java:201) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.time.TimePoint.checkedCall(TimePoint.java:98) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.time.Timeout.call(Timeout.java:174) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.time.Timeout.run(Timeout.java:194) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.time.Timeout.onExistsAndExpired(Timeout.java:233) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.time.Timeout.onExpired(Timeout.java:226) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.BaseCluster.selectServer(BaseCluster.java:153) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.AbstractMultiServerCluster.selectServer(AbstractMultiServerCluster.java:59) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.binding.ClusterBinding.getReadConnectionSource(ClusterBinding.java:82) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.client.internal.ClientSessionBinding.getConnectionSource(ClientSessionBinding.java:108) ~[mongodb-driver-sync-5.2.1.jar:na]
+	at com.mongodb.client.internal.ClientSessionBinding.getReadConnectionSource(ClientSessionBinding.java:88) ~[mongodb-driver-sync-5.2.1.jar:na]
+	at com.mongodb.internal.operation.SyncOperationHelper.withSuppliedResource(SyncOperationHelper.java:148) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.operation.SyncOperationHelper.withSourceAndConnection(SyncOperationHelper.java:129) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.operation.SyncOperationHelper.lambda$executeRetryableRead$4(SyncOperationHelper.java:195) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.operation.SyncOperationHelper.lambda$decorateReadWithRetries$13(SyncOperationHelper.java:317) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.async.function.RetryingSyncSupplier.get(RetryingSyncSupplier.java:67) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.operation.SyncOperationHelper.executeRetryableRead(SyncOperationHelper.java:201) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.operation.SyncOperationHelper.executeRetryableRead(SyncOperationHelper.java:180) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.operation.CommandReadOperation.execute(CommandReadOperation.java:52) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.client.internal.MongoClusterImpl$OperationExecutorImpl.execute(MongoClusterImpl.java:358) ~[mongodb-driver-sync-5.2.1.jar:na]
+	at com.mongodb.client.internal.MongoDatabaseImpl.executeCommand(MongoDatabaseImpl.java:215) ~[mongodb-driver-sync-5.2.1.jar:na]
+	at com.mongodb.client.internal.MongoDatabaseImpl.runCommand(MongoDatabaseImpl.java:184) ~[mongodb-driver-sync-5.2.1.jar:na]
+	at com.mongodb.client.internal.MongoDatabaseImpl.runCommand(MongoDatabaseImpl.java:179) ~[mongodb-driver-sync-5.2.1.jar:na]
+	at org.springframework.data.mongodb.core.MongoTemplate.lambda$executeCommand$3(MongoTemplate.java:516) ~[spring-data-mongodb-4.4.0.jar:4.4.0]
+	at org.springframework.data.mongodb.core.MongoTemplate.execute(MongoTemplate.java:582) ~[spring-data-mongodb-4.4.0.jar:4.4.0]
+	... 42 common frames omitted
+
+2024-12-12T03:25:05.431Z  WARN 29036 --- [ecommerce-project] [RMI TCP Connection(11)-172.22.80.1] o.s.b.a.health.HealthEndpointSupport     : Health contributor org.springframework.boot.actuate.data.mongo.MongoHealthIndicator (mongo) took 30158ms to respond
+2024-12-12T03:25:05.440Z DEBUG 29036 --- [ecommerce-project] [http-nio-9090-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-12-12T03:25:30.577Z DEBUG 29036 --- [ecommerce-project] [http-nio-9090-exec-6] o.s.web.servlet.DispatcherServlet        : POST "/api/v1/categories/add", parameters={}
+2024-12-12T03:25:30.577Z DEBUG 29036 --- [ecommerce-project] [http-nio-9090-exec-6] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to abudu.product.controllers.CategoryController#addCategory(Category)
+2024-12-12T03:25:30.591Z DEBUG 29036 --- [ecommerce-project] [http-nio-9090-exec-6] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [Category{id=null, name='Electronics', parentCategory=Category{id=1, name='Root Category', parentCate (truncated)...]
+2024-12-12T03:25:30.592Z DEBUG 29036 --- [ecommerce-project] [http-nio-9090-exec-6] org.hibernate.SQL                        : insert into categories (description,name,parent_category_id) values (?,?,?)
+2024-12-12T03:25:30.594Z DEBUG 29036 --- [ecommerce-project] [http-nio-9090-exec-6] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'text/plain', given [*/*] and supported [text/plain, */*, application/json, application/*+json]
+2024-12-12T03:25:30.595Z DEBUG 29036 --- [ecommerce-project] [http-nio-9090-exec-6] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing ["Category added successfully: Electronics"]
+2024-12-12T03:25:30.595Z DEBUG 29036 --- [ecommerce-project] [http-nio-9090-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-12-12T03:28:04.365Z DEBUG 29036 --- [ecommerce-project] [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : POST "/api/v1/categories/Electronics/prouducts", parameters={}
+2024-12-12T03:28:04.369Z DEBUG 29036 --- [ecommerce-project] [http-nio-9090-exec-1] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2024-12-12T03:28:04.374Z DEBUG 29036 --- [ecommerce-project] [http-nio-9090-exec-1] o.s.w.s.r.ResourceHttpRequestHandler     : Resource not found
+2024-12-12T03:28:04.378Z DEBUG 29036 --- [ecommerce-project] [http-nio-9090-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Using @ExceptionHandler abudu.product.exceptions.GlobalExceptionHandler#handlerException(Exception)
+2024-12-12T03:28:04.379Z DEBUG 29036 --- [ecommerce-project] [http-nio-9090-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'text/plain', given [*/*] and supported [text/plain, */*, application/json, application/*+json]
+2024-12-12T03:28:04.379Z DEBUG 29036 --- [ecommerce-project] [http-nio-9090-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing ["No static resource api/v1/categories/Electronics/prouducts."]
+2024-12-12T03:28:04.380Z DEBUG 29036 --- [ecommerce-project] [http-nio-9090-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource api/v1/categories/Electronics/prouducts.]
+2024-12-12T03:28:04.381Z DEBUG 29036 --- [ecommerce-project] [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 500 INTERNAL_SERVER_ERROR
+2024-12-12T03:28:15.585Z DEBUG 29036 --- [ecommerce-project] [http-nio-9090-exec-5] o.s.web.servlet.DispatcherServlet        : POST "/api/v1/categories/Electronics/products", parameters={}
+2024-12-12T03:28:15.586Z DEBUG 29036 --- [ecommerce-project] [http-nio-9090-exec-5] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to abudu.product.controllers.CategoryController#addProductToCategory(String, Product)
+2024-12-12T03:28:15.595Z DEBUG 29036 --- [ecommerce-project] [http-nio-9090-exec-5] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [Product{id=null, name='Electronics', price=null, description='null', stock=0, category=null, orders= (truncated)...]
+2024-12-12T03:28:15.638Z DEBUG 29036 --- [ecommerce-project] [http-nio-9090-exec-5] .m.m.a.ExceptionHandlerExceptionResolver : Using @ExceptionHandler abudu.product.exceptions.GlobalExceptionHandler#handlerException(Exception)
+2024-12-12T03:28:15.638Z DEBUG 29036 --- [ecommerce-project] [http-nio-9090-exec-5] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'text/plain', given [*/*] and supported [text/plain, */*, application/json, application/*+json]
+2024-12-12T03:28:15.638Z DEBUG 29036 --- [ecommerce-project] [http-nio-9090-exec-5] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing ["Cannot invoke "org.hibernate.sql.ast.tree.expression.Expression.getColumnReference()" because "pathS (truncated)..."]
+2024-12-12T03:28:15.639Z DEBUG 29036 --- [ecommerce-project] [http-nio-9090-exec-5] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [java.lang.NullPointerException: Cannot invoke "org.hibernate.sql.ast.tree.expression.Expression.getColumnReference()" because "pathSqlExpression" is null]
+2024-12-12T03:28:15.639Z DEBUG 29036 --- [ecommerce-project] [http-nio-9090-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 500 INTERNAL_SERVER_ERROR
+2024-12-12T03:28:29.508Z DEBUG 29036 --- [ecommerce-project] [http-nio-9090-exec-9] o.s.web.servlet.DispatcherServlet        : POST "/api/v1/categories/Electronics/products", parameters={}
+2024-12-12T03:28:29.509Z DEBUG 29036 --- [ecommerce-project] [http-nio-9090-exec-9] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to abudu.product.controllers.CategoryController#addProductToCategory(String, Product)
+2024-12-12T03:28:29.509Z DEBUG 29036 --- [ecommerce-project] [http-nio-9090-exec-9] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [Product{id=null, name='Product Name', price=100.0, description='Product Description', stock=0, categ (truncated)...]
+2024-12-12T03:28:29.511Z DEBUG 29036 --- [ecommerce-project] [http-nio-9090-exec-9] .m.m.a.ExceptionHandlerExceptionResolver : Using @ExceptionHandler abudu.product.exceptions.GlobalExceptionHandler#handlerException(Exception)
+2024-12-12T03:28:29.512Z DEBUG 29036 --- [ecommerce-project] [http-nio-9090-exec-9] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'text/plain', given [*/*] and supported [text/plain, */*, application/json, application/*+json]
+2024-12-12T03:28:29.512Z DEBUG 29036 --- [ecommerce-project] [http-nio-9090-exec-9] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing ["Cannot invoke "org.hibernate.sql.ast.tree.expression.Expression.getColumnReference()" because "pathS (truncated)..."]
+2024-12-12T03:28:29.512Z DEBUG 29036 --- [ecommerce-project] [http-nio-9090-exec-9] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [java.lang.NullPointerException: Cannot invoke "org.hibernate.sql.ast.tree.expression.Expression.getColumnReference()" because "pathSqlExpression" is null]
+2024-12-12T03:28:29.513Z DEBUG 29036 --- [ecommerce-project] [http-nio-9090-exec-9] o.s.web.servlet.DispatcherServlet        : Completed 500 INTERNAL_SERVER_ERROR
+2024-12-12T03:33:36.642Z DEBUG 29036 --- [ecommerce-project] [http-nio-9090-exec-2] o.s.web.servlet.DispatcherServlet        : POST "/api/v1/proudcts", parameters={}
+2024-12-12T03:33:36.643Z DEBUG 29036 --- [ecommerce-project] [http-nio-9090-exec-2] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2024-12-12T03:33:36.647Z DEBUG 29036 --- [ecommerce-project] [http-nio-9090-exec-2] o.s.w.s.r.ResourceHttpRequestHandler     : Resource not found
+2024-12-12T03:33:36.648Z DEBUG 29036 --- [ecommerce-project] [http-nio-9090-exec-2] .m.m.a.ExceptionHandlerExceptionResolver : Using @ExceptionHandler abudu.product.exceptions.GlobalExceptionHandler#handlerException(Exception)
+2024-12-12T03:33:36.649Z DEBUG 29036 --- [ecommerce-project] [http-nio-9090-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'text/plain', given [*/*] and supported [text/plain, */*, application/json, application/*+json]
+2024-12-12T03:33:36.649Z DEBUG 29036 --- [ecommerce-project] [http-nio-9090-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing ["No static resource api/v1/proudcts."]
+2024-12-12T03:33:36.650Z DEBUG 29036 --- [ecommerce-project] [http-nio-9090-exec-2] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource api/v1/proudcts.]
+2024-12-12T03:33:36.651Z DEBUG 29036 --- [ecommerce-project] [http-nio-9090-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 500 INTERNAL_SERVER_ERROR
+2024-12-12T03:34:03.043Z DEBUG 29036 --- [ecommerce-project] [http-nio-9090-exec-7] o.s.web.servlet.DispatcherServlet        : POST "/api/v1/products", parameters={}
+2024-12-12T03:34:03.044Z DEBUG 29036 --- [ecommerce-project] [http-nio-9090-exec-7] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to abudu.product.controllers.ProductController#createProduct(ProductDTO)
+2024-12-12T03:34:03.055Z DEBUG 29036 --- [ecommerce-project] [http-nio-9090-exec-7] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [Product{id='null', name='Shoe', description='Product Description', price=100.0, imgUrl='http://examp (truncated)...]
+2024-12-12T03:34:03.059Z DEBUG 29036 --- [ecommerce-project] [http-nio-9090-exec-7] org.hibernate.SQL                        : insert into products (category_id,created_at,description,img_url,name,price,stock,updated_at) values (?,?,?,?,?,?,?,?)
+2024-12-12T03:34:03.071Z DEBUG 29036 --- [ecommerce-project] [http-nio-9090-exec-7] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2024-12-12T03:34:03.071Z DEBUG 29036 --- [ecommerce-project] [http-nio-9090-exec-7] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [Product{id='1', name='Shoe', description='Product Description', price=100.0, imgUrl='http://example. (truncated)...]
+2024-12-12T03:34:03.099Z DEBUG 29036 --- [ecommerce-project] [http-nio-9090-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-12-12T03:45:07.632Z  INFO 29036 --- [ecommerce-project] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2024-12-12T03:45:07.640Z  INFO 29036 --- [ecommerce-project] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2024-12-12T03:45:07.656Z  INFO 29036 --- [ecommerce-project] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-12-12T03:45:07.661Z  INFO 29036 --- [ecommerce-project] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-12-12T03:45:07.676Z  INFO 29036 --- [ecommerce-project] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-12-12T03:46:46.739Z  INFO 29784 --- [ecommerce-project] [main] abudu.product.ProductApplication         : Starting ProductApplication using Java 23.0.1 with PID 29784 (C:\Users\AbuduSamadu\Documents\Product Management System\product\target\classes started by AbuduSamadu in C:\Users\AbuduSamadu\Documents\Product Management System\product)
+2024-12-12T03:46:46.742Z  INFO 29784 --- [ecommerce-project] [main] abudu.product.ProductApplication         : The following 1 profile is active: "dev"
+2024-12-12T03:46:48.770Z  INFO 29784 --- [ecommerce-project] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-12-12T03:46:48.772Z  INFO 29784 --- [ecommerce-project] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-12-12T03:46:48.825Z  INFO 29784 --- [ecommerce-project] [main] .RepositoryConfigurationExtensionSupport : Spring Data JPA - Could not safely identify store assignment for repository candidate interface abudu.product.repositories.AuditLogRepository; If you want this repository to be a JPA repository, consider annotating your entities with one of these annotations: jakarta.persistence.Entity, jakarta.persistence.MappedSuperclass (preferred), or consider extending one of the following types with your repository: org.springframework.data.jpa.repository.JpaRepository
+2024-12-12T03:46:48.866Z  INFO 29784 --- [ecommerce-project] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 82 ms. Found 5 JPA repository interfaces.
+2024-12-12T03:46:48.878Z  INFO 29784 --- [ecommerce-project] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-12-12T03:46:48.878Z  INFO 29784 --- [ecommerce-project] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2024-12-12T03:46:48.891Z  INFO 29784 --- [ecommerce-project] [main] .RepositoryConfigurationExtensionSupport : Spring Data MongoDB - Could not safely identify store assignment for repository candidate interface abudu.product.repositories.CartRepository; If you want this repository to be a MongoDB repository, consider annotating your entities with one of these annotations: org.springframework.data.mongodb.core.mapping.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.mongodb.repository.MongoRepository
+2024-12-12T03:46:48.891Z  INFO 29784 --- [ecommerce-project] [main] .RepositoryConfigurationExtensionSupport : Spring Data MongoDB - Could not safely identify store assignment for repository candidate interface abudu.product.repositories.CategoryRepository; If you want this repository to be a MongoDB repository, consider annotating your entities with one of these annotations: org.springframework.data.mongodb.core.mapping.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.mongodb.repository.MongoRepository
+2024-12-12T03:46:48.892Z  INFO 29784 --- [ecommerce-project] [main] .RepositoryConfigurationExtensionSupport : Spring Data MongoDB - Could not safely identify store assignment for repository candidate interface abudu.product.repositories.OrderRepository; If you want this repository to be a MongoDB repository, consider annotating your entities with one of these annotations: org.springframework.data.mongodb.core.mapping.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.mongodb.repository.MongoRepository
+2024-12-12T03:46:48.892Z  INFO 29784 --- [ecommerce-project] [main] .RepositoryConfigurationExtensionSupport : Spring Data MongoDB - Could not safely identify store assignment for repository candidate interface abudu.product.repositories.ProductRepository; If you want this repository to be a MongoDB repository, consider annotating your entities with one of these annotations: org.springframework.data.mongodb.core.mapping.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.mongodb.repository.MongoRepository
+2024-12-12T03:46:48.892Z  INFO 29784 --- [ecommerce-project] [main] .RepositoryConfigurationExtensionSupport : Spring Data MongoDB - Could not safely identify store assignment for repository candidate interface abudu.product.repositories.UserRepository; If you want this repository to be a MongoDB repository, consider annotating your entities with one of these annotations: org.springframework.data.mongodb.core.mapping.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.mongodb.repository.MongoRepository
+2024-12-12T03:46:48.899Z  INFO 29784 --- [ecommerce-project] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 18 ms. Found 1 MongoDB repository interface.
+2024-12-12T03:46:49.742Z  INFO 29784 --- [ecommerce-project] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9090 (http)
+2024-12-12T03:46:49.755Z  INFO 29784 --- [ecommerce-project] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-12-12T03:46:49.755Z  INFO 29784 --- [ecommerce-project] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.33]
+2024-12-12T03:46:49.812Z  INFO 29784 --- [ecommerce-project] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-12-12T03:46:49.813Z  INFO 29784 --- [ecommerce-project] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3016 ms
+2024-12-12T03:46:49.994Z DEBUG 29784 --- [ecommerce-project] [main] o.s.w.f.ServerHttpObservationFilter      : Filter 'webMvcObservationFilter' configured for use
+2024-12-12T03:46:50.138Z  INFO 29784 --- [ecommerce-project] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-12-12T03:46:50.210Z  INFO 29784 --- [ecommerce-project] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.2.Final
+2024-12-12T03:46:50.246Z  INFO 29784 --- [ecommerce-project] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-12-12T03:46:50.615Z  INFO 29784 --- [ecommerce-project] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-12-12T03:46:50.662Z  INFO 29784 --- [ecommerce-project] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-12-12T03:46:50.983Z  INFO 29784 --- [ecommerce-project] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@73e399cc
+2024-12-12T03:46:50.986Z  INFO 29784 --- [ecommerce-project] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-12-12T03:46:51.087Z  INFO 29784 --- [ecommerce-project] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 16.4
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2024-12-12T03:46:52.766Z  INFO 29784 --- [ecommerce-project] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-12-12T03:46:53.009Z  INFO 29784 --- [ecommerce-project] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-12-12T03:46:53.555Z  INFO 29784 --- [ecommerce-project] [main] org.mongodb.driver.client                : MongoClient with metadata {"application": {"name": "Cluster0"}, "driver": {"name": "mongo-java-driver|sync|spring-boot", "version": "5.2.1"}, "os": {"type": "Windows", "name": "Windows 10", "architecture": "amd64", "version": "10.0"}, "platform": "Java/Oracle Corporation/23.0.1+11-39"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=majority, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=MongoCredential{mechanism=null, userName='abudusamed', source='admin', password=<hidden>, mechanismProperties=<hidden>}, transportSettings=null, commandListeners=[io.micrometer.core.instrument.binder.mongodb.MongoMetricsCommandListener@2f59cb6f], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, CollectionCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, EnumCodecProvider{}, com.mongodb.client.model.mql.ExpressionCodecProvider@4f2a0909, com.mongodb.Jep395RecordCodecProvider@34947355, com.mongodb.KotlinCodecProvider@62ad5f35]}, loggerSettings=LoggerSettings{maxDocumentLength=1000}, clusterSettings={hosts=[127.0.0.1:27017], srvHost=cluster0.s5opd.mongodb.net, srvServiceName=mongodb, mode=MULTIPLE, requiredClusterType=REPLICA_SET, requiredReplicaSetName='atlas-g8q5qp-shard-0', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='15 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[io.micrometer.core.instrument.binder.mongodb.MongoMetricsConnectionPoolListener@5799b8a2], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverMonitoringMode=AUTO, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=true, invalidHostNameAllowed=false, context=null}, applicationName='Cluster0', compressorList=[], uuidRepresentation=JAVA_LEGACY, serverApi=null, autoEncryptionSettings=null, dnsClient=null, inetAddressResolver=null, contextProvider=null, timeoutMS=null}
+2024-12-12T03:46:53.626Z  INFO 29784 --- [ecommerce-project] [cluster-ClusterId{value='675a5cad63e100189c7058ce', description='Cluster0'}-srv-cluster0.s5opd.mongodb.net] org.mongodb.driver.cluster               : Adding discovered server cluster0-shard-00-00.s5opd.mongodb.net:27017 to client view of cluster
+2024-12-12T03:46:53.678Z  INFO 29784 --- [ecommerce-project] [cluster-ClusterId{value='675a5cad63e100189c7058ce', description='Cluster0'}-srv-cluster0.s5opd.mongodb.net] org.mongodb.driver.cluster               : Adding discovered server cluster0-shard-00-01.s5opd.mongodb.net:27017 to client view of cluster
+2024-12-12T03:46:53.681Z  INFO 29784 --- [ecommerce-project] [cluster-ClusterId{value='675a5cad63e100189c7058ce', description='Cluster0'}-srv-cluster0.s5opd.mongodb.net] org.mongodb.driver.cluster               : Adding discovered server cluster0-shard-00-02.s5opd.mongodb.net:27017 to client view of cluster
+2024-12-12T03:46:54.525Z  INFO 29784 --- [ecommerce-project] [cluster-ClusterId{value='675a5cad63e100189c7058ce', description='Cluster0'}-cluster0-shard-00-02.s5opd.mongodb.net:27017] org.mongodb.driver.cluster               : Exception in monitor thread while connecting to server cluster0-shard-00-02.s5opd.mongodb.net:27017
+
+com.mongodb.MongoSocketWriteException: Exception sending message
+	at com.mongodb.internal.connection.InternalStreamConnection.throwTranslatedWriteException(InternalStreamConnection.java:790) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.sendMessage(InternalStreamConnection.java:675) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.trySendMessage(InternalStreamConnection.java:507) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.sendCommandMessage(InternalStreamConnection.java:482) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.sendAndReceiveInternal(InternalStreamConnection.java:440) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.lambda$sendAndReceive$0(InternalStreamConnection.java:375) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.sendAndReceive(InternalStreamConnection.java:378) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.CommandHelper.sendAndReceive(CommandHelper.java:100) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.CommandHelper.executeCommand(CommandHelper.java:49) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnectionInitializer.initializeConnectionDescription(InternalStreamConnectionInitializer.java:144) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnectionInitializer.startHandshake(InternalStreamConnectionInitializer.java:79) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.open(InternalStreamConnection.java:235) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.lookupServerDescription(DefaultServerMonitor.java:219) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.run(DefaultServerMonitor.java:176) ~[mongodb-driver-core-5.2.1.jar:na]
+Caused by: javax.net.ssl.SSLException: (internal_error) Received fatal alert: internal_error
+	at java.base/sun.security.ssl.Alert.createSSLException(Alert.java:132) ~[na:na]
+	at java.base/sun.security.ssl.Alert.createSSLException(Alert.java:117) ~[na:na]
+	at java.base/sun.security.ssl.TransportContext.fatal(TransportContext.java:370) ~[na:na]
+	at java.base/sun.security.ssl.Alert$AlertConsumer.consume(Alert.java:287) ~[na:na]
+	at java.base/sun.security.ssl.TransportContext.dispatch(TransportContext.java:209) ~[na:na]
+	at java.base/sun.security.ssl.SSLTransport.decode(SSLTransport.java:172) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketImpl.decode(SSLSocketImpl.java:1507) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketImpl.readHandshakeRecord(SSLSocketImpl.java:1422) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:455) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketImpl.ensureNegotiated(SSLSocketImpl.java:924) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketImpl$AppOutputStream.write(SSLSocketImpl.java:1293) ~[na:na]
+	at com.mongodb.internal.connection.SocketStream.write(SocketStream.java:165) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.sendMessage(InternalStreamConnection.java:672) ~[mongodb-driver-core-5.2.1.jar:na]
+	... 12 common frames omitted
+
+2024-12-12T03:46:54.525Z  INFO 29784 --- [ecommerce-project] [cluster-ClusterId{value='675a5cad63e100189c7058ce', description='Cluster0'}-cluster0-shard-00-01.s5opd.mongodb.net:27017] org.mongodb.driver.cluster               : Exception in monitor thread while connecting to server cluster0-shard-00-01.s5opd.mongodb.net:27017
+
+com.mongodb.MongoSocketWriteException: Exception sending message
+	at com.mongodb.internal.connection.InternalStreamConnection.throwTranslatedWriteException(InternalStreamConnection.java:790) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.sendMessage(InternalStreamConnection.java:675) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.trySendMessage(InternalStreamConnection.java:507) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.sendCommandMessage(InternalStreamConnection.java:482) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.sendAndReceiveInternal(InternalStreamConnection.java:440) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.lambda$sendAndReceive$0(InternalStreamConnection.java:375) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.sendAndReceive(InternalStreamConnection.java:378) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.CommandHelper.sendAndReceive(CommandHelper.java:100) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.CommandHelper.executeCommand(CommandHelper.java:49) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnectionInitializer.initializeConnectionDescription(InternalStreamConnectionInitializer.java:144) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnectionInitializer.startHandshake(InternalStreamConnectionInitializer.java:79) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.open(InternalStreamConnection.java:235) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.lookupServerDescription(DefaultServerMonitor.java:219) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.run(DefaultServerMonitor.java:176) ~[mongodb-driver-core-5.2.1.jar:na]
+Caused by: javax.net.ssl.SSLException: (internal_error) Received fatal alert: internal_error
+	at java.base/sun.security.ssl.Alert.createSSLException(Alert.java:132) ~[na:na]
+	at java.base/sun.security.ssl.Alert.createSSLException(Alert.java:117) ~[na:na]
+	at java.base/sun.security.ssl.TransportContext.fatal(TransportContext.java:370) ~[na:na]
+	at java.base/sun.security.ssl.Alert$AlertConsumer.consume(Alert.java:287) ~[na:na]
+	at java.base/sun.security.ssl.TransportContext.dispatch(TransportContext.java:209) ~[na:na]
+	at java.base/sun.security.ssl.SSLTransport.decode(SSLTransport.java:172) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketImpl.decode(SSLSocketImpl.java:1507) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketImpl.readHandshakeRecord(SSLSocketImpl.java:1422) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:455) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketImpl.ensureNegotiated(SSLSocketImpl.java:924) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketImpl$AppOutputStream.write(SSLSocketImpl.java:1293) ~[na:na]
+	at com.mongodb.internal.connection.SocketStream.write(SocketStream.java:165) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.sendMessage(InternalStreamConnection.java:672) ~[mongodb-driver-core-5.2.1.jar:na]
+	... 12 common frames omitted
+
+2024-12-12T03:46:54.525Z  INFO 29784 --- [ecommerce-project] [cluster-ClusterId{value='675a5cad63e100189c7058ce', description='Cluster0'}-cluster0-shard-00-00.s5opd.mongodb.net:27017] org.mongodb.driver.cluster               : Exception in monitor thread while connecting to server cluster0-shard-00-00.s5opd.mongodb.net:27017
+
+com.mongodb.MongoSocketWriteException: Exception sending message
+	at com.mongodb.internal.connection.InternalStreamConnection.throwTranslatedWriteException(InternalStreamConnection.java:790) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.sendMessage(InternalStreamConnection.java:675) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.trySendMessage(InternalStreamConnection.java:507) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.sendCommandMessage(InternalStreamConnection.java:482) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.sendAndReceiveInternal(InternalStreamConnection.java:440) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.lambda$sendAndReceive$0(InternalStreamConnection.java:375) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.sendAndReceive(InternalStreamConnection.java:378) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.CommandHelper.sendAndReceive(CommandHelper.java:100) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.CommandHelper.executeCommand(CommandHelper.java:49) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnectionInitializer.initializeConnectionDescription(InternalStreamConnectionInitializer.java:144) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnectionInitializer.startHandshake(InternalStreamConnectionInitializer.java:79) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.open(InternalStreamConnection.java:235) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.lookupServerDescription(DefaultServerMonitor.java:219) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.run(DefaultServerMonitor.java:176) ~[mongodb-driver-core-5.2.1.jar:na]
+Caused by: javax.net.ssl.SSLException: (internal_error) Received fatal alert: internal_error
+	at java.base/sun.security.ssl.Alert.createSSLException(Alert.java:132) ~[na:na]
+	at java.base/sun.security.ssl.Alert.createSSLException(Alert.java:117) ~[na:na]
+	at java.base/sun.security.ssl.TransportContext.fatal(TransportContext.java:370) ~[na:na]
+	at java.base/sun.security.ssl.Alert$AlertConsumer.consume(Alert.java:287) ~[na:na]
+	at java.base/sun.security.ssl.TransportContext.dispatch(TransportContext.java:209) ~[na:na]
+	at java.base/sun.security.ssl.SSLTransport.decode(SSLTransport.java:172) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketImpl.decode(SSLSocketImpl.java:1507) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketImpl.readHandshakeRecord(SSLSocketImpl.java:1422) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:455) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketImpl.ensureNegotiated(SSLSocketImpl.java:924) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketImpl$AppOutputStream.write(SSLSocketImpl.java:1293) ~[na:na]
+	at com.mongodb.internal.connection.SocketStream.write(SocketStream.java:165) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.sendMessage(InternalStreamConnection.java:672) ~[mongodb-driver-core-5.2.1.jar:na]
+	... 12 common frames omitted
+
+2024-12-12T03:46:54.592Z  INFO 29784 --- [ecommerce-project] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-12-12T03:46:55.340Z  WARN 29784 --- [ecommerce-project] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-12-12T03:46:55.489Z DEBUG 29784 --- [ecommerce-project] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 18 mappings in 'requestMappingHandlerMapping'
+2024-12-12T03:46:55.672Z DEBUG 29784 --- [ecommerce-project] [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2024-12-12T03:46:55.741Z DEBUG 29784 --- [ecommerce-project] [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-12-12T03:46:55.813Z DEBUG 29784 --- [ecommerce-project] [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-12-12T03:46:56.203Z  INFO 29784 --- [ecommerce-project] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2024-12-12T03:46:56.275Z  INFO 29784 --- [ecommerce-project] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 9090 (http) with context path '/'
+2024-12-12T03:46:56.287Z  INFO 29784 --- [ecommerce-project] [main] abudu.product.ProductApplication         : Started ProductApplication in 10.071 seconds (process running for 12.792)
+2024-12-12T03:47:38.377Z  INFO 29784 --- [ecommerce-project] [http-nio-9090-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-12-12T03:47:38.378Z  INFO 29784 --- [ecommerce-project] [http-nio-9090-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-12-12T03:47:38.378Z DEBUG 29784 --- [ecommerce-project] [http-nio-9090-exec-2] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2024-12-12T03:47:38.378Z DEBUG 29784 --- [ecommerce-project] [http-nio-9090-exec-2] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
+2024-12-12T03:47:38.379Z DEBUG 29784 --- [ecommerce-project] [http-nio-9090-exec-2] o.s.web.servlet.DispatcherServlet        : Detected FixedThemeResolver
+2024-12-12T03:47:38.381Z DEBUG 29784 --- [ecommerce-project] [http-nio-9090-exec-2] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@12f4b3a2
+2024-12-12T03:47:38.382Z DEBUG 29784 --- [ecommerce-project] [http-nio-9090-exec-2] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@2fb3c642
+2024-12-12T03:47:38.382Z DEBUG 29784 --- [ecommerce-project] [http-nio-9090-exec-2] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2024-12-12T03:47:38.383Z  INFO 29784 --- [ecommerce-project] [http-nio-9090-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+2024-12-12T03:47:38.446Z DEBUG 29784 --- [ecommerce-project] [http-nio-9090-exec-2] o.s.web.servlet.DispatcherServlet        : POST "/api/v1/products", parameters={}
+2024-12-12T03:47:38.455Z DEBUG 29784 --- [ecommerce-project] [http-nio-9090-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to abudu.product.controllers.ProductController#createProduct(ProductDTO)
+2024-12-12T03:47:38.657Z DEBUG 29784 --- [ecommerce-project] [http-nio-9090-exec-2] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [Product{id='null', name='Watch', description='Product Description', price=100.0, imgUrl='http://exam (truncated)...]
+2024-12-12T03:47:38.753Z DEBUG 29784 --- [ecommerce-project] [http-nio-9090-exec-2] org.hibernate.SQL                        : insert into products (category_id,created_at,description,img_url,name,price,stock,updated_at) values (?,?,?,?,?,?,?,?)
+2024-12-12T03:47:38.874Z DEBUG 29784 --- [ecommerce-project] [http-nio-9090-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2024-12-12T03:47:38.876Z DEBUG 29784 --- [ecommerce-project] [http-nio-9090-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [Product{id='2', name='Watch', description='Product Description', price=100.0, imgUrl='http://example (truncated)...]
+2024-12-12T03:47:38.908Z DEBUG 29784 --- [ecommerce-project] [http-nio-9090-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-12-12T03:48:03.933Z DEBUG 29784 --- [ecommerce-project] [http-nio-9090-exec-3] o.s.web.servlet.DispatcherServlet        : POST "/api/v1/products", parameters={}
+2024-12-12T03:48:03.934Z DEBUG 29784 --- [ecommerce-project] [http-nio-9090-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to abudu.product.controllers.ProductController#createProduct(ProductDTO)
+2024-12-12T03:48:03.935Z DEBUG 29784 --- [ecommerce-project] [http-nio-9090-exec-3] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [Product{id='null', name='shirt', description='Product Description', price=100.0, imgUrl='http://exam (truncated)...]
+2024-12-12T03:48:03.937Z DEBUG 29784 --- [ecommerce-project] [http-nio-9090-exec-3] org.hibernate.SQL                        : insert into products (category_id,created_at,description,img_url,name,price,stock,updated_at) values (?,?,?,?,?,?,?,?)
+2024-12-12T03:48:03.941Z DEBUG 29784 --- [ecommerce-project] [http-nio-9090-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2024-12-12T03:48:03.942Z DEBUG 29784 --- [ecommerce-project] [http-nio-9090-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [Product{id='3', name='shirt', description='Product Description', price=100.0, imgUrl='http://example (truncated)...]
+2024-12-12T03:48:03.943Z DEBUG 29784 --- [ecommerce-project] [http-nio-9090-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-12-12T04:15:31.455Z  INFO 29784 --- [ecommerce-project] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2024-12-12T04:15:31.475Z  INFO 29784 --- [ecommerce-project] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2024-12-12T04:15:31.501Z  INFO 29784 --- [ecommerce-project] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-12-12T04:15:31.506Z  INFO 29784 --- [ecommerce-project] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-12-12T04:15:31.537Z  INFO 29784 --- [ecommerce-project] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
