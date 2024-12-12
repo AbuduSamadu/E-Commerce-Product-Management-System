@@ -1,4 +1,4 @@
-package abudu.product.utils;
+package abudu.product.utilities;
 
 import abudu.product.models.Product;
 

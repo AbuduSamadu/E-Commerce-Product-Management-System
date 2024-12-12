@@ -6,8 +6,8 @@ import abudu.product.exceptions.ResourcesAlreadyExitsException;
 import abudu.product.mappers.UserMapper;
 import abudu.product.models.User;
 import abudu.product.repositories.UserRepository;
-import abudu.product.utils.SecurityUtil;
-import abudu.product.utils.ValidationUtil;
+import abudu.product.utilities.SecurityUtil;
+import abudu.product.utilities.ValidationUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

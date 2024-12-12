@@ -5,11 +5,11 @@ import abudu.product.exceptions.InvalidCredentialException;
 import abudu.product.mappers.UserMapper;
 import abudu.product.models.User;
 import abudu.product.repositories.UserRepository;
-import abudu.product.utils.SecurityUtil;
+import abudu.product.utilities.SecurityUtil;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.cache.annotation.Cacheable;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.server.ResponseStatusException;
 
 import java.util.Optional;
@@ -27,10 +27,14 @@ public class UserLoginService {
     @Autowired
     private UserMapper userMapper;
 
-    @Cacheable(value = "users", key = "#username")
-    public UserDTO loginUser(String username, String password) {
+    @Transactional
+    public UserDTO loginUser( String email, String password) {
         try {
-            Optional<User> userOptional = userRepository.findByUsername(username);
+            if (email == null || password == null) {
+                throw new InvalidCredentialException("Invalid credentials");
+            }
+
+            Optional<User> userOptional = userRepository.findByEmail(email);
 
             if (userOptional.isPresent()) {
                 User user = userOptional.get();
@@ -43,12 +47,9 @@ public class UserLoginService {
             } else {
                 throw new InvalidCredentialException("Invalid credentials");
             }
-        } catch (InvalidCredentialException e) {
-            LOGGER.log(Level.WARNING, "Invalid credentials: {0}", e.getMessage());
-            throw new ResponseStatusException(HttpStatus.UNAUTHORIZED, e.getMessage());
         } catch (Exception e) {
-            LOGGER.log(Level.SEVERE, "Internal server error: {0}", e);
-            throw new ResponseStatusException(HttpStatus.INTERNAL_SERVER_ERROR, "Internal server error");
+            LOGGER.log(Level.SEVERE, "An error occurred while logging in: {0}", e.getMessage());
+            throw new ResponseStatusException(HttpStatus.INTERNAL_SERVER_ERROR, "An error occurred while logging in");
         }
     }
 }

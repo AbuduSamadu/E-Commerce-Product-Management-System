@@ -4,8 +4,8 @@ import abudu.product.exceptions.ResourceNotFoundException;
 import abudu.product.models.Category;
 import abudu.product.models.Product;
 import abudu.product.repositories.CategoryRepository;
-import abudu.product.utils.BinaryTree;
-import abudu.product.utils.BinaryTreeNode;
+import abudu.product.utilities.BinaryTree;
+import abudu.product.utilities.BinaryTreeNode;
 import org.springframework.stereotype.Service;
 
 @Service

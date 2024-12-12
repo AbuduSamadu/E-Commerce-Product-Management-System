@@ -10,12 +10,12 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api/v1/auth")
-public class UseController {
+public class UserController {
 
     private final UserRegistrationService userRegistrationService;
     private final UserLoginService userLoginService;
 
-    public UseController(UserRegistrationService userRegistrationService, UserLoginService userLoginService) {
+    public UserController(UserRegistrationService userRegistrationService, UserLoginService userLoginService) {
         this.userLoginService = userLoginService;
         this.userRegistrationService = userRegistrationService;
     }
@@ -28,7 +28,7 @@ public class UseController {
 
     @PostMapping("/login")
     public ResponseEntity<UserDTO> loginUser(@Validated @RequestBody UserDTO userDTO) {
-        UserDTO loggedInUser = userLoginService.loginUser(userDTO.getUsername(), userDTO.getPassword());
+        UserDTO loggedInUser = userLoginService.loginUser(userDTO.getEmail(), userDTO.getPassword());
         return new ResponseEntity<>(loggedInUser, HttpStatus.OK);
     }
 }

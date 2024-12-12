@@ -2,7 +2,7 @@ package abudu.product.controllers;
 
 import abudu.product.models.Product;
 import abudu.product.services.CategoryService;
-import abudu.product.utils.BinaryTreeNode;
+import abudu.product.utilities.BinaryTreeNode;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
