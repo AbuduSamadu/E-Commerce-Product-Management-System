@@ -40,6 +40,8 @@ public class UserLoginService {
                 User user = userOptional.get();
                 byte[] salt = user.getSalt(); // Retrieve the salt
                 if (SecurityUtil.validatePassword(password, user.getPassword(), salt)) {
+                    user.setActive(true);
+                    userRepository.save(user);
                     return userMapper.mapToDTO(user);
                 } else {
                     throw new InvalidCredentialException("Invalid credentials");

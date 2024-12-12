@@ -38,7 +38,7 @@ public class UserRegistrationService {
         user.setCreatedAt(LocalDateTime.now());
         user.setUpdatedAt(LocalDateTime.now());
         user.setPassword(userDTO.getPassword());
-        user.setActive(true);
+        user.setActive(false);
 
         // Generate and set the salt
         byte[] salt = SecurityUtil.generateSalt();

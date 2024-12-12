@@ -2,6 +2,7 @@ package abudu.product.utilities;
 
 
 import abudu.product.exceptions.ResourceNotFoundException;
+import abudu.product.exceptions.ResourcesAlreadyExitsException;
 import abudu.product.models.Product;
 
 public class BinaryTree {
@@ -13,6 +14,9 @@ public class BinaryTree {
 
     // Insert a category
     public void insert(String categoryName) {
+        if (search(categoryName) != null) {
+            throw new ResourcesAlreadyExitsException("Category already exists: " + categoryName);
+        }
         root = insertRec(root, categoryName);
     }
 

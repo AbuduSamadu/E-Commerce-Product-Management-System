@@ -7,7 +7,7 @@ import java.util.List;
 
 public class BinaryTreeNode {
     private String categoryName;
-    private List<Product> products;
+    private final List<Product> products;
     private BinaryTreeNode left;
     private BinaryTreeNode right;
 

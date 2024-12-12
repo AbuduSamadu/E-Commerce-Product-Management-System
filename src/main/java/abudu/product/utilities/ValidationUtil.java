@@ -10,11 +10,4 @@ public class ValidationUtil {
         return email != null && EMAIL_PATTERN.matcher(email).matches();
     }
 
-    public static boolean isValidPrice(Double price) {
-        return price != null && price > 0;
-    }
-
-    public static boolean isValidQuantity(Integer quantity) {
-        return quantity != null && quantity >= 0;
-    }
 }
