@@ -1,5 +1,6 @@
 package abudu.product.controllers;
 
+import abudu.product.models.Category;
 import abudu.product.models.Product;
 import abudu.product.services.CategoryService;
 import abudu.product.utilities.BinaryTreeNode;
@@ -7,7 +8,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/api/v1//categories")
+@RequestMapping("/api/v1/categories")
 public class CategoryController {
 
     private final CategoryService categoryService;
@@ -18,9 +19,9 @@ public class CategoryController {
 
     // Endpoint to add a new category
     @PostMapping("/add")
-    public ResponseEntity<String> addCategory(@RequestParam String categoryName) {
-        categoryService.addCategory(categoryName);
-        return ResponseEntity.ok("Category added successfully: " + categoryName);
+    public ResponseEntity<String> addCategory(@RequestBody Category category) {
+        categoryService.addCategory(category.getName());
+        return ResponseEntity.ok("Category added successfully: " + category.getName());
     }
 
     // Endpoint to add a product to a category
