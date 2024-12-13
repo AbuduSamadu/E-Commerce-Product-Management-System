@@ -11,11 +11,11 @@ import org.springframework.stereotype.Component;
 
 import java.time.LocalDateTime;
 
-@Aspect
-@Component
+
+
 public class AuditLogAspect {
 
-    @Autowired
+
     private AuditLogRepository auditLogRepository;
 
     // Define a pointcut for methods annotated with @Loggable or specific package methods

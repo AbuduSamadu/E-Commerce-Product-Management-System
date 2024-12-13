@@ -1,6 +1,6 @@
 package abudu.product.interceptors;
 
-import abudu.product.dto.AuditLogDTO;
+
 import abudu.product.models.AuditLog;
 import abudu.product.repositories.AuditLogRepository;
 import jakarta.servlet.http.HttpServletRequest;

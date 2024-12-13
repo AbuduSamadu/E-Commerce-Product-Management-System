@@ -17,7 +17,8 @@ target/
 .idea
 *.iws
 *.iml
-*.ipr
+*.ipr\
+.logs
 
 ### NetBeans ###
 /nbproject/private/
@@ -32,3 +33,5 @@ build/
 ### VS Code ###
 .vscode/
 password.txt
+application-dev.properties
+application-prod.properties
