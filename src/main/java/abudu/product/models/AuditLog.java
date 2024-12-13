@@ -13,17 +13,17 @@ public class AuditLog {
     private String action;
     private String performedBy;
     private LocalDateTime timestamp;
-    private String details;
+    private String entityName;
 
     public AuditLog() {
     }
 
-    public AuditLog(Long id, String action, String performedBy, LocalDateTime timestamp, String details) {
+    public AuditLog(Long id, String action, String performedBy, LocalDateTime timestamp, String entityName) {
         this.id = id;
         this.action = action;
         this.performedBy = performedBy;
         this.timestamp = timestamp;
-        this.details = details;
+        this.entityName = entityName;
     }
 
     // Getters and Setters
@@ -59,12 +59,12 @@ public class AuditLog {
         this.timestamp = timestamp;
     }
 
-    public String getDetails() {
-        return details;
+    public String getEntityName() {
+        return entityName;
     }
 
-    public void setDetails(String details) {
-        this.details = details;
+    public void setEntityName(String details) {
+        this.entityName = details;
     }
 
     // toString
@@ -76,7 +76,7 @@ public class AuditLog {
                 ", action='" + action + '\'' +
                 ", performedBy='" + performedBy + '\'' +
                 ", timestamp=" + timestamp +
-                ", details='" + details + '\'' +
+                ", details='" + entityName + '\'' +
                 '}';
     }
 }
