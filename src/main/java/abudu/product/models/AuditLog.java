@@ -59,8 +59,7 @@ public class AuditLog {
         this.timestamp = timestamp;
     }
 
-    public String getEntityName() {
-        return entityName;
+    public void getEntityName( String entityName ) {
     }
 
     public void setEntityName(String details) {

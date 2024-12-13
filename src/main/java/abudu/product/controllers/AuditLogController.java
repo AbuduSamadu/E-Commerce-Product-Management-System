@@ -19,8 +19,8 @@ public class AuditLogController {
         this.auditLogService = auditLogService;
     }
     @RequestMapping("/create")
-    public ResponseEntity<AuditLog> createAuditLog(String action, String details, String performedBy) {
-        AuditLog auditLog = auditLogService.createAuditLog(action, details, performedBy);
+    public ResponseEntity<AuditLog> createAuditLog(String action, String entityName, String performedBy) {
+        AuditLog auditLog = auditLogService.createAuditLog(action, entityName, performedBy);
         return ResponseEntity.ok(auditLog);
     }
 
