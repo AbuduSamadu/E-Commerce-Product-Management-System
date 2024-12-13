@@ -36,23 +36,7 @@ public class UserLoginService {
 
             Optional<User> userOptional = userRepository.findByEmail(email);
 
-//            if (userOptional.isPresent()) {
-//                User user = userOptional.get();
-//                byte[] salt = user.getSalt(); // Retrieve the salt
-//                if (SecurityUtil.validatePassword(password, user.getPassword(), salt)) {
-//                    user.setActive(true);
-//                    userRepository.save(user);
-//                    return userMapper.mapToDTO(user);
-//                } else {
-//                    throw new InvalidCredentialException("Invalid credentials");
-//                }
-//            } else {
-//                throw new InvalidCredentialException("Invalid credentials");
-//            }
-
-
             if (userOptional.isEmpty()) {
-
                 throw new InvalidCredentialException("Invalid credentials");
             }
 

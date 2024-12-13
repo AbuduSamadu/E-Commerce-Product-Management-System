@@ -1,7 +1,5 @@
 package abudu.product.services;
 
-
-import abudu.product.annotations.Loggable;
 import abudu.product.models.AuditLog;
 import abudu.product.repositories.AuditLogRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,22 +17,16 @@ public class AuditLogService {
         this.auditLogRepository = auditLogRepository;
     }
 
-    @Loggable
-    public void createAuditLog(String action, String entityName) {
-        createAuditLog(action, entityName, "System");
-    }
-
     public AuditLog createAuditLog(String action, String entityName, String performedBy) {
         AuditLog auditLog = new AuditLog();
         auditLog.setAction(action);
-        auditLog.getEntityName(entityName);
+        auditLog.setEntityName(entityName);
         auditLog.setPerformedBy(performedBy);
-        auditLog.setTimestamp(LocalDateTime.now());;
+        auditLog.setTimestamp(LocalDateTime.now());
         return auditLogRepository.save(auditLog);
     }
 
     public List<AuditLog> getAuditLogs() {
         return auditLogRepository.findAll();
     }
-
 }
